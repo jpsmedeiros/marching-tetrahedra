@@ -30,6 +30,6 @@ Para rodar o programa:
 	mpicc main.cpp -o main.o
 	mpirun -np X -mca plm_rsh_no_tree_spawn 1 main.o
 
-OBS: -np X , onde X representa o número de processos a serem criados
+OBS: -np X , onde X representa o número de processos a serem criados  
 OBS2: a opção -mca plm_rsh_no_tree_spawn 1 é útil apenas se você precisar que o MPI não distribua a operação por SSH em modo de árvore  
 do nó A pro B depois do B pro C. Com essa opção, as SSH's exxecutadas para fazer operações de inicialização são a partir do nó A para os outros nós apenas.
