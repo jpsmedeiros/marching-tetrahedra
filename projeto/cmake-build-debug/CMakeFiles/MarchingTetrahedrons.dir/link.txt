@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/MarchingTetrahedrons.dir/Decimate.cpp.o CMakeFiles/MarchingTetrahedrons.dir/Gyroid.cpp.o CMakeFiles/MarchingTetrahedrons.dir/Isosurface.cpp.o CMakeFiles/MarchingTetrahedrons.dir/Sphere.cpp.o CMakeFiles/MarchingTetrahedrons.dir/main.cpp.o CMakeFiles/MarchingTetrahedrons.dir/math3D.cpp.o  -o MarchingTetrahedrons -lGL -lGLU -lglut -lXmu -lXi 
