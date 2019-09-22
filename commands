@@ -1,3 +1,7 @@
 # add alias oscar
 echo alias oscar=\'ssh jpsmedeiros@sshserver.ic.uff.br \"ssh -tt jpsmedeiros@oscar.ic.uff.br\"\' >> ~/.bashrc
 $SHELL
+
+
+# build local machine (dentro da pasta build)
+cmake --build .

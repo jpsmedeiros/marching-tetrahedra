@@ -114,7 +114,6 @@ void mouseDragged(int x, int y)
     mouse.y = y;
 
     glutPostRedisplay();
-
 }
 
 void init()
@@ -128,31 +127,43 @@ void init()
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
 
-    //Sphere surface;
+    //Sphere surface
     Gyroid surface;
+    int x = -5;
+    int y = 5;
+    int size = 2;
     list = preDecimate(surface, -5, 5, -5, 5, -5, 5, -1, 30);
 }
 
-int main (int argc, char * argv[])
-{
+void glutInitConfig() {
 
-    assert(sizeof(char) == 1);
-
-    glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGBA);
 
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
 
     glutCreateWindow("Volume Rendering");
+}
 
-    init();
-
+void glutSetFuncs(){
     glutDisplayFunc(render);
     glutReshapeFunc(changeSize);
     glutMouseFunc(mouseDown);
     glutMotionFunc(mouseDragged);
+}
 
+void initAndStartLoop(){
+    glutInitConfig();
+    init();
+    glutSetFuncs();
     glutMainLoop();
+}
+
+int main (int argc, char * argv[])
+{
+    assert(sizeof(char) == 1);
+    glutInit(&argc, argv);
+    initAndStartLoop();
+
     return 0;
 }
