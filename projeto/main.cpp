@@ -136,12 +136,9 @@ void init()
 }
 
 void glutInitConfig() {
-
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGBA);
-
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
-
     glutCreateWindow("Volume Rendering");
 }
 
@@ -164,6 +161,5 @@ int main (int argc, char * argv[])
     assert(sizeof(char) == 1);
     glutInit(&argc, argv);
     initAndStartLoop();
-
     return 0;
 }
