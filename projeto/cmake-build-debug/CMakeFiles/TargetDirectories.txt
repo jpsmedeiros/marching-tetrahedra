@@ -1,3 +1,0 @@
-/home/gpergola/files/uff/tcc/marching_tetrahedros_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gpergola/files/uff/tcc/marching_tetrahedros_test/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gpergola/files/uff/tcc/marching_tetrahedros_test/cmake-build-debug/CMakeFiles/MarchingTetrahedrons.dir
