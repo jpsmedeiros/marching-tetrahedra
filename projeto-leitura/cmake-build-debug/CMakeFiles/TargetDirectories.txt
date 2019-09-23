@@ -1,3 +1,3 @@
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles/projeto.dir
+/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/projeto-leitura.dir

@@ -54,45 +54,45 @@ RM = /home/gpergola/files/clion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto
+CMAKE_SOURCE_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/projeto.dir
+# Target rules for target CMakeFiles/projeto-leitura.dir
 
 # All Build rule for target.
-CMakeFiles/projeto.dir/all:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/depend
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target projeto"
-.PHONY : CMakeFiles/projeto.dir/all
+CMakeFiles/projeto-leitura.dir/all:
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/depend
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target projeto-leitura"
+.PHONY : CMakeFiles/projeto-leitura.dir/all
 
 # Include target in all.
-all: CMakeFiles/projeto.dir/all
+all: CMakeFiles/projeto-leitura.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/projeto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/projeto.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/projeto.dir/rule
+CMakeFiles/projeto-leitura.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/projeto-leitura.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/projeto-leitura.dir/rule
 
 # Convenience name for target.
-projeto: CMakeFiles/projeto.dir/rule
+projeto-leitura: CMakeFiles/projeto-leitura.dir/rule
 
-.PHONY : projeto
-
-# clean rule for target.
-CMakeFiles/projeto.dir/clean:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/clean
-.PHONY : CMakeFiles/projeto.dir/clean
+.PHONY : projeto-leitura
 
 # clean rule for target.
-clean: CMakeFiles/projeto.dir/clean
+CMakeFiles/projeto-leitura.dir/clean:
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/clean
+.PHONY : CMakeFiles/projeto-leitura.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/projeto-leitura.dir/clean
 
 .PHONY : clean
 

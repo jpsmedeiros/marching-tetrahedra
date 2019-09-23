@@ -5,7 +5,6 @@ CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../Array3D.h
 CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../Decimate.cpp
 CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../Decimate.h
 CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../Isosurface.h
-CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../common.h
 CMakeFiles/projeto-escrita.dir/Decimate.cpp.o: ../math3D.h
 
 CMakeFiles/projeto-escrita.dir/Gyroid.cpp.o: ../Gyroid.cpp
@@ -17,16 +16,9 @@ CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o: ../Isosurface.cpp
 CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o: ../Isosurface.h
 CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o: ../math3D.h
 
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: ../Isosurface.h
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: ../Sphere.cpp
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: ../Sphere.h
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: ../math3D.h
-
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../Decimate.h
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../Gyroid.h
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../Isosurface.h
-CMakeFiles/projeto-escrita.dir/main.cpp.o: ../Sphere.h
-CMakeFiles/projeto-escrita.dir/main.cpp.o: ../common.h
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../main.cpp
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../math3D.h
 

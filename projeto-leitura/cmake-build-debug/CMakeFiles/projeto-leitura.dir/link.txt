@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/projeto-leitura.dir/Decimate.cpp.o CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o CMakeFiles/projeto-leitura.dir/Sphere.cpp.o CMakeFiles/projeto-leitura.dir/main.cpp.o CMakeFiles/projeto-leitura.dir/math3D.cpp.o  -o projeto-leitura -lGL -lGLU -lglut -lXmu -lXi 

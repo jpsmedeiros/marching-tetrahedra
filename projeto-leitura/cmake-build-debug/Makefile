@@ -48,10 +48,10 @@ RM = /home/gpergola/files/clion/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto
+CMAKE_SOURCE_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named projeto
+# Target rules for targets named projeto-leitura
 
 # Build rule for target.
-projeto: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 projeto
-.PHONY : projeto
+projeto-leitura: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 projeto-leitura
+.PHONY : projeto-leitura
 
 # fast build rule for target.
-projeto/fast:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/build
-.PHONY : projeto/fast
+projeto-leitura/fast:
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/build
+.PHONY : projeto-leitura/fast
 
 Decimate.o: Decimate.cpp.o
 
@@ -129,7 +129,7 @@ Decimate.o: Decimate.cpp.o
 
 # target to build an object file
 Decimate.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Decimate.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.o
 .PHONY : Decimate.cpp.o
 
 Decimate.i: Decimate.cpp.i
@@ -138,7 +138,7 @@ Decimate.i: Decimate.cpp.i
 
 # target to preprocess a source file
 Decimate.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Decimate.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.i
 .PHONY : Decimate.cpp.i
 
 Decimate.s: Decimate.cpp.s
@@ -147,7 +147,7 @@ Decimate.s: Decimate.cpp.s
 
 # target to generate assembly for a file
 Decimate.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Decimate.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.s
 .PHONY : Decimate.cpp.s
 
 Gyroid.o: Gyroid.cpp.o
@@ -156,7 +156,7 @@ Gyroid.o: Gyroid.cpp.o
 
 # target to build an object file
 Gyroid.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Gyroid.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o
 .PHONY : Gyroid.cpp.o
 
 Gyroid.i: Gyroid.cpp.i
@@ -165,7 +165,7 @@ Gyroid.i: Gyroid.cpp.i
 
 # target to preprocess a source file
 Gyroid.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Gyroid.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.i
 .PHONY : Gyroid.cpp.i
 
 Gyroid.s: Gyroid.cpp.s
@@ -174,7 +174,7 @@ Gyroid.s: Gyroid.cpp.s
 
 # target to generate assembly for a file
 Gyroid.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Gyroid.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.s
 .PHONY : Gyroid.cpp.s
 
 Isosurface.o: Isosurface.cpp.o
@@ -183,7 +183,7 @@ Isosurface.o: Isosurface.cpp.o
 
 # target to build an object file
 Isosurface.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Isosurface.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o
 .PHONY : Isosurface.cpp.o
 
 Isosurface.i: Isosurface.cpp.i
@@ -192,7 +192,7 @@ Isosurface.i: Isosurface.cpp.i
 
 # target to preprocess a source file
 Isosurface.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Isosurface.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.i
 .PHONY : Isosurface.cpp.i
 
 Isosurface.s: Isosurface.cpp.s
@@ -201,7 +201,7 @@ Isosurface.s: Isosurface.cpp.s
 
 # target to generate assembly for a file
 Isosurface.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Isosurface.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.s
 .PHONY : Isosurface.cpp.s
 
 Sphere.o: Sphere.cpp.o
@@ -210,7 +210,7 @@ Sphere.o: Sphere.cpp.o
 
 # target to build an object file
 Sphere.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Sphere.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.o
 .PHONY : Sphere.cpp.o
 
 Sphere.i: Sphere.cpp.i
@@ -219,7 +219,7 @@ Sphere.i: Sphere.cpp.i
 
 # target to preprocess a source file
 Sphere.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Sphere.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.i
 .PHONY : Sphere.cpp.i
 
 Sphere.s: Sphere.cpp.s
@@ -228,7 +228,7 @@ Sphere.s: Sphere.cpp.s
 
 # target to generate assembly for a file
 Sphere.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/Sphere.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.s
 .PHONY : Sphere.cpp.s
 
 main.o: main.cpp.o
@@ -237,7 +237,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -246,7 +246,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -255,7 +255,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 math3D.o: math3D.cpp.o
@@ -264,7 +264,7 @@ math3D.o: math3D.cpp.o
 
 # target to build an object file
 math3D.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/math3D.cpp.o
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.o
 .PHONY : math3D.cpp.o
 
 math3D.i: math3D.cpp.i
@@ -273,7 +273,7 @@ math3D.i: math3D.cpp.i
 
 # target to preprocess a source file
 math3D.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/math3D.cpp.i
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.i
 .PHONY : math3D.cpp.i
 
 math3D.s: math3D.cpp.s
@@ -282,7 +282,7 @@ math3D.s: math3D.cpp.s
 
 # target to generate assembly for a file
 math3D.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto.dir/build.make CMakeFiles/projeto.dir/math3D.cpp.s
+	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.s
 .PHONY : math3D.cpp.s
 
 # Help Target
@@ -293,7 +293,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... projeto"
+	@echo "... projeto-leitura"
 	@echo "... Decimate.o"
 	@echo "... Decimate.i"
 	@echo "... Decimate.s"

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 project(projeto-escrita)
-
+find_package(MPI REQUIRED)
 add_executable(projeto-escrita
     Array3D.h
     Decimate.h
@@ -13,4 +13,6 @@ add_executable(projeto-escrita
     math3D.h
     math3D.cpp)
 
-target_link_libraries(projeto-escrita)
+target_link_libraries(projeto-escrita
+        PRIVATE
+        MPI_C)

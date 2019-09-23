@@ -21,8 +21,6 @@ iostream
 -
 cmath
 -
-common.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/common.h
 Decimate.h
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Decimate.h
 Array3D.h
@@ -54,37 +52,11 @@ Isosurface.h
 math3D.h
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/math3D.h
 
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp
-Sphere.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.h
-cmath
--
-
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.h
-Isosurface.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Isosurface.h
-math3D.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/math3D.h
-
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/common.h
-
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/main.cpp
-iostream
--
-cstdlib
--
-cassert
--
-common.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/common.h
 Gyroid.h
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Gyroid.h
-Sphere.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.h
 Decimate.h
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Decimate.h
-iostream
--
 
 /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/math3D.cpp
 math3D.h

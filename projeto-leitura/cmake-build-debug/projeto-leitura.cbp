@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="projeto-leitura"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projeto-leitura">
+				<Option output="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/projeto-leitura" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto-leitura"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="projeto-leitura/fast">
+				<Option output="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/projeto-leitura" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto-leitura/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Array3D.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/common.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/main.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.cpp">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.h">
+			<Option target="projeto-leitura"/>
+		</Unit>
+		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

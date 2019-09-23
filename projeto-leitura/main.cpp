@@ -130,10 +130,8 @@ void init()
 
     //Sphere surface
     Gyroid surface;
-    int x = -5;
-    int y = 5;
-    int size = 2;
-    list = preDecimate(surface, -10, 10, 5, 15, -15, 15, -1, 100);
+    int x = 10;
+    list = preDecimate(surface, -x, x, -x, x, -x, x, -1, 100);
     cout << list;
 }
 

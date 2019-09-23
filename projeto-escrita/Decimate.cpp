@@ -3,6 +3,9 @@
 #include <cmath>
 #include "Decimate.h"
 #include "Array3D.h"
+#include "mpi.h"
+
+using namespace std;
 
 static inline void drawVert(const Isosurface& surface, const Point3D& p1, const Point3D& p2, float isolevel)
 {
@@ -44,9 +47,8 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
 
     Vector3D normal = surface.gradientAt(x, y, z);
 
-    //TODO: aqui que vai entrar a leitura dos pontos que devemos pintar?
-    glNormal3f(normal.x, normal.y, normal.z);
-    glVertex3f(x, y, z);
+    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
+    cout << "s," << x << ',' << y << ',' << z << '\n';
 }
 
 static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
@@ -201,7 +203,7 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
             drawVert(surface, p[0], p[3], isolevel);
             break;
 
-        // what is this I don't even
+        // shouldn't be going here
         default:
             assert(false);
     }
@@ -213,9 +215,9 @@ void decimate(const Isosurface& surface,
               float yMin, float yMax,
               float zMin, float zMax,
               float isolevel,
-              size_t resolution) // resolution indicates # of cubes
+              size_t resolution) // resolution indicates # of cubes -> the more the slower
 {
-
+//    cout << "xMin: " << xMin << " xMax: " << xMax << "\n";
     size_t pointRes = resolution + 1; // indicates the # of points per side
 
     float xrange = xMax - xMin;
@@ -236,8 +238,6 @@ void decimate(const Isosurface& surface,
         }
     }
 
-
-    glBegin(GL_TRIANGLES);
     for (size_t i = 0; i < resolution; ++i) {
         float x1 = (float)i/resolution * xrange + xMin;
         float x2 = (float)(i+1)/resolution * xrange + xMin;
@@ -301,12 +301,10 @@ void decimate(const Isosurface& surface,
                     { v[5], v[1], v[6], v[4] }
                 };
 
-                for (int t = 0; t < 6; ++t)
+                for (int t = 0; t < 6; ++t){
                     drawTetrahedron(surface, tetrahedra[t], isolevel);
-
+                }
             }
         }
     }
-    glEnd();
-
 }
