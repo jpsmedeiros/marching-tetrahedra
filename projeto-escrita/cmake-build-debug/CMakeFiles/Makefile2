@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escr
 CMakeFiles/projeto-escrita.dir/all:
 	$(MAKE) -f CMakeFiles/projeto-escrita.dir/build.make CMakeFiles/projeto-escrita.dir/depend
 	$(MAKE) -f CMakeFiles/projeto-escrita.dir/build.make CMakeFiles/projeto-escrita.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target projeto-escrita"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target projeto-escrita"
 .PHONY : CMakeFiles/projeto-escrita.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/projeto-escrita.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/projeto-escrita.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/projeto-escrita.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/projeto-escrita.dir/rule

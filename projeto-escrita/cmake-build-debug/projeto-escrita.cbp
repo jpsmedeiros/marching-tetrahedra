@@ -105,15 +105,6 @@
 		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Isosurface.h">
 			<Option target="projeto-escrita"/>
 		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp">
-			<Option target="projeto-escrita"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.h">
-			<Option target="projeto-escrita"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/common.h">
-			<Option target="projeto-escrita"/>
-		</Unit>
 		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/main.cpp">
 			<Option target="projeto-escrita"/>
 		</Unit>

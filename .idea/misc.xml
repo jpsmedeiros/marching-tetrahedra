@@ -6,8 +6,10 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$/projeto-escrita" />
-      <file path="$PROJECT_DIR$/projeto-leitura" />
     </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/projeto-leitura" />
+    </excludeRoots>
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />

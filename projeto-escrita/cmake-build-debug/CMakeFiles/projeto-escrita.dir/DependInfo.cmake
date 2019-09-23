@@ -7,7 +7,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Decimate.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/Decimate.cpp.o"
   "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Gyroid.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/Gyroid.cpp.o"
   "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Isosurface.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o"
-  "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/Sphere.cpp.o"
   "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/main.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/main.cpp.o"
   "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/math3D.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/math3D.cpp.o"
   )

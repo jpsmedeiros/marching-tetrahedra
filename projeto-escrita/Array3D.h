@@ -1,16 +1,9 @@
-//
-//  Array3D.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef ARRAY3D_H
 #define ARRAY3D_H
 
-#include <cstring>   // size_t
-#include <algorithm> // std::copy, std::swap
-#include <cassert>   // assert
+#include <cstring>
+#include <algorithm>
+#include <cassert>
 
 template <class T>
 class Array3D

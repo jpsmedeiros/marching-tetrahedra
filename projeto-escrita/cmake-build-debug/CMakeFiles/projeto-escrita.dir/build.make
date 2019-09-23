@@ -129,33 +129,9 @@ CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o.provides: CMakeFiles/projeto-esc
 CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o.provides.build: CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o
 
 
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: CMakeFiles/projeto-escrita.dir/flags.make
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o: ../Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projeto-escrita.dir/Sphere.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-escrita.dir/Sphere.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp
-
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-escrita.dir/Sphere.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp > CMakeFiles/projeto-escrita.dir/Sphere.cpp.i
-
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-escrita.dir/Sphere.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/Sphere.cpp -o CMakeFiles/projeto-escrita.dir/Sphere.cpp.s
-
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.requires
-
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.provides: CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-escrita.dir/build.make CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.provides
-
-CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.provides.build: CMakeFiles/projeto-escrita.dir/Sphere.cpp.o
-
-
 CMakeFiles/projeto-escrita.dir/main.cpp.o: CMakeFiles/projeto-escrita.dir/flags.make
 CMakeFiles/projeto-escrita.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projeto-escrita.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projeto-escrita.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-escrita.dir/main.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/main.cpp
 
 CMakeFiles/projeto-escrita.dir/main.cpp.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/projeto-escrita.dir/main.cpp.o.provides.build: CMakeFiles/projeto-esc
 
 CMakeFiles/projeto-escrita.dir/math3D.cpp.o: CMakeFiles/projeto-escrita.dir/flags.make
 CMakeFiles/projeto-escrita.dir/math3D.cpp.o: ../math3D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projeto-escrita.dir/math3D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projeto-escrita.dir/math3D.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-escrita.dir/math3D.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/math3D.cpp
 
 CMakeFiles/projeto-escrita.dir/math3D.cpp.i: cmake_force
@@ -206,7 +182,6 @@ projeto__escrita_OBJECTS = \
 "CMakeFiles/projeto-escrita.dir/Decimate.cpp.o" \
 "CMakeFiles/projeto-escrita.dir/Gyroid.cpp.o" \
 "CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o" \
-"CMakeFiles/projeto-escrita.dir/Sphere.cpp.o" \
 "CMakeFiles/projeto-escrita.dir/main.cpp.o" \
 "CMakeFiles/projeto-escrita.dir/math3D.cpp.o"
 
@@ -216,17 +191,11 @@ projeto__escrita_EXTERNAL_OBJECTS =
 projeto-escrita: CMakeFiles/projeto-escrita.dir/Decimate.cpp.o
 projeto-escrita: CMakeFiles/projeto-escrita.dir/Gyroid.cpp.o
 projeto-escrita: CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o
-projeto-escrita: CMakeFiles/projeto-escrita.dir/Sphere.cpp.o
 projeto-escrita: CMakeFiles/projeto-escrita.dir/main.cpp.o
 projeto-escrita: CMakeFiles/projeto-escrita.dir/math3D.cpp.o
 projeto-escrita: CMakeFiles/projeto-escrita.dir/build.make
-projeto-escrita: /usr/lib/x86_64-linux-gnu/libGL.so
-projeto-escrita: /usr/lib/x86_64-linux-gnu/libGLU.so
-projeto-escrita: /usr/lib/x86_64-linux-gnu/libglut.so
-projeto-escrita: /usr/lib/x86_64-linux-gnu/libXmu.so
-projeto-escrita: /usr/lib/x86_64-linux-gnu/libXi.so
 projeto-escrita: CMakeFiles/projeto-escrita.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable projeto-escrita"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-escrita/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable projeto-escrita"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projeto-escrita.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -237,7 +206,6 @@ CMakeFiles/projeto-escrita.dir/build: projeto-escrita
 CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/Decimate.cpp.o.requires
 CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/Gyroid.cpp.o.requires
 CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/Isosurface.cpp.o.requires
-CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/Sphere.cpp.o.requires
 CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/main.cpp.o.requires
 CMakeFiles/projeto-escrita.dir/requires: CMakeFiles/projeto-escrita.dir/math3D.cpp.o.requires
 
