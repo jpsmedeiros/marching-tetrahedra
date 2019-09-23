@@ -1,14 +1,18 @@
 #include <iostream>
 #include "Gyroid.h"
 #include "Decimate.h"
-# include <mpi.h>
+#include <mpi.h>
+#include <unistd.h>
+#include <math.h>
+
 using namespace std;
 
 int main (int argc, char * argv[])
 {
-    int id;
+    int process_id;
     int ierr;
-    int p;
+    int n_processes;
+    double startTime = 0, endTime = 0;
 
     ierr = MPI_Init (&argc, &argv);
     if (ierr != 0)
@@ -18,29 +22,34 @@ int main (int argc, char * argv[])
         cout << "MPI_Init returned nonzero ierr.\n";
         exit (1);
     }
-    ierr = MPI_Comm_size (MPI_COMM_WORLD, &p);
-    ierr = MPI_Comm_rank (MPI_COMM_WORLD, &id);
-    if ( id == 0 )
-    {
-        cout << "\n";
-        cout << "P" << id << ": Master process:\n";
-        cout << "P" << id << ": The number of processes is " << p << "\n";
-        cout << "\n";
-    }
+    ierr = MPI_Comm_size (MPI_COMM_WORLD, &n_processes);
+    ierr = MPI_Comm_rank (MPI_COMM_WORLD, &process_id);
+
+    if ( process_id == 0)
+        startTime = MPI_Wtime();
 
     Gyroid surface;
     int x0 = -10;
-    int h = -x0 / p;
-    int xMin = x0 + (h * id);
+    int h = -x0 / n_processes;
+    int xMin = x0 + (h * process_id);
     int xMax = xMin + h;
-    decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, 10);
+    double res = 300 / cbrt (n_processes);
+    decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, res);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+
+    if (process_id == 0){
+        endTime = MPI_Wtime();
+        sleep(1);
+        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
+    }
 
     MPI_Finalize ();
 
-    if (id == 0)
+    if (process_id == 0)
     {
         cout << "\n";
-        cout << "P" << id << ": Normal end of execution.\n";
+        cout << "Normal end of execution.\n";
         cout << "\n";
     }
 

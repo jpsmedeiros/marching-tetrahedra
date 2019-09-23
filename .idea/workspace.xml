@@ -13,39 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48e4e16-45e8-4006-aae9-4cb5932255df" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-escrita/Decimate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/Decimate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/CMakeFiles/projeto-escrita.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/projeto-escrita" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/projeto-escrita" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-escrita/compile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/compile.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto-escrita/hostfile" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/hostfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-escrita/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/CMakeFiles/projeto.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-leitura/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-leitura/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/projeto/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/projeto-escrita/cmake-build-debug/" />
@@ -65,8 +36,8 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projeto-escrita/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+                <state relative-caret-position="595">
+                  <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -78,8 +49,8 @@
           <file leaf-file-name="Decimate.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projeto-escrita/Decimate.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+                <state relative-caret-position="604">
+                  <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
                 </state>
               </provider>
             </entry>
@@ -104,6 +75,7 @@
       <find>m</find>
       <find>MPI</find>
       <find>namespace</find>
+      <find>startt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,8 +102,8 @@
         <option value="$PROJECT_DIR$/projeto-escrita/math3D.h" />
         <option value="$PROJECT_DIR$/projeto-escrita/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/projeto-leitura/main.cpp" />
-        <option value="$PROJECT_DIR$/projeto-escrita/main.cpp" />
         <option value="$PROJECT_DIR$/projeto-escrita/Decimate.cpp" />
+        <option value="$PROJECT_DIR$/projeto-escrita/main.cpp" />
       </list>
     </option>
   </component>
@@ -229,12 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1567462337721</updated>
       <workItem from="1567462339215" duration="2950000" />
-      <workItem from="1569190150131" duration="13416000" />
+      <workItem from="1569190150131" duration="17031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16366000" />
+    <option name="totallyTimeSpent" value="19981000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="-20" width="1901" height="1101" extended-state="6" />
@@ -543,17 +515,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projeto-escrita/main.cpp">
+    <entry file="file:///usr/include/x86_64-linux-gnu/c++/5/bits/c++config.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="328">
+          <caret line="195" column="35" lean-forward="true" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto-escrita/Decimate.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="604">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto-escrita/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
         </state>
       </provider>
     </entry>
