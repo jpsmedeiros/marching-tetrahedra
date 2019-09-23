@@ -3,7 +3,6 @@
 #include <cmath>
 #include "Decimate.h"
 #include "Array3D.h"
-#include "mpi.h"
 
 using namespace std;
 

@@ -13,9 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e48e4e16-45e8-4006-aae9-4cb5932255df" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-escrita/Decimate.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/Decimate.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/compile.sh" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/compile.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto-escrita/hostfile" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/hostfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto-escrita/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/projeto-escrita/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/projeto/cmake-build-debug/" />
@@ -36,8 +35,8 @@
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projeto-escrita/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+                <state relative-caret-position="593">
+                  <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -49,8 +48,11 @@
           <file leaf-file-name="Decimate.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projeto-escrita/Decimate.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="604">
-                  <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+                <state relative-caret-position="-1078">
+                  <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -201,12 +203,12 @@
       <option name="presentableId" value="Default" />
       <updated>1567462337721</updated>
       <workItem from="1567462339215" duration="2950000" />
-      <workItem from="1569190150131" duration="17031000" />
+      <workItem from="1569190150131" duration="17426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19981000" />
+    <option name="totallyTimeSpent" value="20376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="-20" width="1901" height="1101" extended-state="6" />
@@ -524,15 +526,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto-escrita/Decimate.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
+        <state relative-caret-position="-1078">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projeto-escrita/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="593">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
         </state>
       </provider>
     </entry>
