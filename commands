@@ -5,3 +5,7 @@ $SHELL
 
 # build local machine (dentro da pasta build)
 cmake --build .
+
+
+scp main.o gustavopergola@sshserver.ic.uff.br:/home/grad/gustavopergola/main.o && \
+ ssh gustavopergola@sshserver.ic.uff.br "scp main.o gustavopergola@oscar.ic.uff.br:/home_nfs/gustavopergola/main.o"
