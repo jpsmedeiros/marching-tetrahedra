@@ -184,12 +184,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.projeto-escrita">
-    <configuration name="projeto-escrita" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/projeto-escrita" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projeto-leitura" RUN_TARGET_NAME="projeto-escrita" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="projeto-leitura" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/projeto-leitura" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projeto-leitura" RUN_TARGET_NAME="projeto-leitura" EXPLICIT_BUILD_TARGET_NAME="all" />
+  <component name="RunManager" selected="CMake Application.projeto-escrita">
+    <configuration name="projeto-escrita" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/projeto-escrita" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projeto-leitura" RUN_TARGET_NAME="projeto-escrita" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="projeto-leitura" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/projeto-leitura" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projeto-leitura" RUN_TARGET_NAME="projeto-leitura" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.projeto-escrita" />
-      <item itemvalue="Application.projeto-leitura" />
+      <item itemvalue="CMake Application.projeto-escrita" />
+      <item itemvalue="CMake Application.projeto-leitura" />
     </list>
   </component>
   <component name="SvnConfiguration">
