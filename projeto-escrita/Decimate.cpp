@@ -33,7 +33,6 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
 
          */
 
-
         // interp == 0: vert should be at p1
         // interp == 1: vert should be at p2
         float interp = (isolevel - v1) / (v2 - v1);

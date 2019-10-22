@@ -7,5 +7,9 @@ $SHELL
 cmake --build .
 
 
-scp main.o gustavopergola@sshserver.ic.uff.br:/home/grad/gustavopergola/main.o && \
- ssh gustavopergola@sshserver.ic.uff.br "scp main.o gustavopergola@oscar.ic.uff.br:/home_nfs/gustavopergola/main.o"
+# copia projeto pro oscar
+scp -r projeto-escrita gustavopergola@sshserver.ic.uff.br:/home/grad/gustavopergola/projeto-escrita && \
+ ssh gustavopergola@sshserver.ic.uff.br "scp -r projeto-escrita gustavopergola@oscar.ic.uff.br:/home_nfs/gustavopergola/projeto-escrita"
+
+# compila projeto no oscar
+/var/programas/openmpi-1.8.4/bin/mpic++ Decimate.cpp Isosurface.cpp Gyroid.cpp math3D.cpp main.cpp -o main.o
