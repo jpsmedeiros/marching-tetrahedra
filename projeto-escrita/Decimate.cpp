@@ -45,8 +45,8 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
 
     Vector3D normal = surface.gradientAt(x, y, z);
 
-//    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
-//    cout << "s," << x << ',' << y << ',' << z << '\n';
+    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
+    cout << "s," << x << ',' << y << ',' << z << '\n';
 }
 
 static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
@@ -247,8 +247,11 @@ void decimate(const Isosurface& surface,
             float y1 = (float)j/resolution * yrange + yMin;
             float y2 = (float)(j+1)/resolution * yrange + yMin;
             for (size_t k = 0; k < resolution; ++k) {
-                float z1 = (float)k/resolution * zrange + zMin;
                 float z2 = (float)(k+1)/resolution * zrange + zMin;
+                float z1 = (float)k/resolution * zrange + zMin;
+//                cout << "x1" << x1 << " x2" << x2 << "\n";
+//                cout << "y1" << y1 << " y2" << y2 << "\n";
+//                cout << "z1" << z1 << " z2" << z2 << "\n";
 
                 /*
 
