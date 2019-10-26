@@ -15,6 +15,9 @@
 #include "Sphere.h"
 #include "Decimate.h"
 #include <iostream>
+#include <fstream>
+#include <string.h>
+#include <stdio.h>
 using namespace std;
 
 
@@ -139,7 +142,7 @@ void glutInitConfig() {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGBA);
     glutInitWindowPosition(100, 100);
     glutInitWindowSize(800, 600);
-    glutCreateWindow("Volume Rendering");
+    glutCreateWindow("Marching Tetrahedra");
 }
 
 void glutSetFuncs(){
@@ -156,11 +159,51 @@ void initAndStartLoop(){
     glutMainLoop();
 }
 
+float* extractLineData(std::string line) {
+    float *extractedData = new float[3];
+    char data[line.size() + 1];
+    char * actual;
+    strcpy(data, line.c_str());
+    actual = strtok(data, ",");
+    for (int i = 0; i < 3 && actual != NULL; i++ ){
+        actual = strtok (NULL, ",");
+        extractedData[i] = atof(actual);
+    }
+    return extractedData;
+}
+
+void setSurfaceData() {
+    std::ifstream file("output.o");
+    std::string lineData;
+    float * normal;
+    float * position;
+    while (std::getline(file, lineData)) {
+        cout << "Normal Data\n" + lineData + "\n";
+        //normal = extractLineData(lineData);
+        //glNormal3f(normal[0], normal[1], normal[2]);
+        //printf("%f\n%f\n%f\n", normal[0], normal[1], normal[2]);
+        std::getline(file, lineData);
+        //position = extractLineData(lineData);
+        //glVertex3f(position[0], position[1], position[2]);
+        //printf("%f\n%f\n%f\n", position[0], position[1], position[2]);
+        cout << "Position Data\n" + lineData+"\n";
+        //break;
+    }
+}
+
+void drawImage() {
+    GLuint list = glGenLists(1);
+    glNewList(list, GL_COMPILE);
+    setSurfaceData();
+    glEndList();
+}
+
 int main (int argc, char * argv[])
 {
     assert(sizeof(char) == 1);
     glutInit(&argc, argv);
     cout << "Hello, World!\n";
+    drawImage();
     initAndStartLoop();
     return 0;
 }
