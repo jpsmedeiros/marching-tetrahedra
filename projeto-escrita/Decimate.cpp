@@ -43,10 +43,9 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
         z = p1.z * oneMinusInterp + p2.z * interp;
     }
 
-    Vector3D normal = surface.gradientAt(x, y, z);
-
-    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
     cout << "s," << x << ',' << y << ',' << z << '\n';
+    Vector3D normal = surface.gradientAt(x, y, z);
+    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
 }
 
 static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
