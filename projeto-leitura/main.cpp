@@ -37,11 +37,11 @@ void render()
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
     glLightfv(GL_LIGHT0, GL_POSITION, light_position);
 
-    glPushMatrix();
-    glRotatef(rotY, 1, 0, 0);
-    glRotatef(rotX, 0, 1, 0);
-    glutSolidCube(0.15);
-    glPopMatrix();
+    //glPushMatrix();
+    //glRotatef(rotY, 1, 0, 0);
+    //glRotatef(rotX, 0, 1, 0);
+    //glutSolidCube(0.15);
+    //glPopMatrix();
 
     glPushMatrix();
     glRotatef(rotY, 1, 0, 0);
@@ -114,18 +114,16 @@ float* extractLineData(std::string line) {
 }
 
 void setSurfaceData() {
-    std::ifstream file("output.o");
+    std::ifstream file("/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/build/output.o");
     std::string lineData;
-    float * normal;
-    float * position;
+    float * float_points;
     while (std::getline(file, lineData)) {
-        cout << "Normal Data\n" + lineData + "\n";
-        normal = extractLineData(lineData);
-        glNormal3f(normal[0], normal[1], normal[2]);
-        std::getline(file, lineData);
-        position = extractLineData(lineData);
-        glVertex3f(position[0], position[1], position[2]);
-        cout << "Position Data\n" + lineData+"\n";
+        float_points = extractLineData(lineData);
+        if (lineData[0] == 's') {
+            glVertex3f(float_points[0], float_points[1], float_points[2]);
+        }else {
+            glNormal3f(float_points[0], float_points[1], float_points[2]);
+        }
     }
 }
 

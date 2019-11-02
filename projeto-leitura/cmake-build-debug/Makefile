@@ -123,114 +123,6 @@ projeto-leitura/fast:
 	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/build
 .PHONY : projeto-leitura/fast
 
-Decimate.o: Decimate.cpp.o
-
-.PHONY : Decimate.o
-
-# target to build an object file
-Decimate.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.o
-.PHONY : Decimate.cpp.o
-
-Decimate.i: Decimate.cpp.i
-
-.PHONY : Decimate.i
-
-# target to preprocess a source file
-Decimate.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.i
-.PHONY : Decimate.cpp.i
-
-Decimate.s: Decimate.cpp.s
-
-.PHONY : Decimate.s
-
-# target to generate assembly for a file
-Decimate.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.s
-.PHONY : Decimate.cpp.s
-
-Gyroid.o: Gyroid.cpp.o
-
-.PHONY : Gyroid.o
-
-# target to build an object file
-Gyroid.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o
-.PHONY : Gyroid.cpp.o
-
-Gyroid.i: Gyroid.cpp.i
-
-.PHONY : Gyroid.i
-
-# target to preprocess a source file
-Gyroid.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.i
-.PHONY : Gyroid.cpp.i
-
-Gyroid.s: Gyroid.cpp.s
-
-.PHONY : Gyroid.s
-
-# target to generate assembly for a file
-Gyroid.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.s
-.PHONY : Gyroid.cpp.s
-
-Isosurface.o: Isosurface.cpp.o
-
-.PHONY : Isosurface.o
-
-# target to build an object file
-Isosurface.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o
-.PHONY : Isosurface.cpp.o
-
-Isosurface.i: Isosurface.cpp.i
-
-.PHONY : Isosurface.i
-
-# target to preprocess a source file
-Isosurface.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.i
-.PHONY : Isosurface.cpp.i
-
-Isosurface.s: Isosurface.cpp.s
-
-.PHONY : Isosurface.s
-
-# target to generate assembly for a file
-Isosurface.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.s
-.PHONY : Isosurface.cpp.s
-
-Sphere.o: Sphere.cpp.o
-
-.PHONY : Sphere.o
-
-# target to build an object file
-Sphere.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.o
-.PHONY : Sphere.cpp.o
-
-Sphere.i: Sphere.cpp.i
-
-.PHONY : Sphere.i
-
-# target to preprocess a source file
-Sphere.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.i
-.PHONY : Sphere.cpp.i
-
-Sphere.s: Sphere.cpp.s
-
-.PHONY : Sphere.s
-
-# target to generate assembly for a file
-Sphere.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.s
-.PHONY : Sphere.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -258,33 +150,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-math3D.o: math3D.cpp.o
-
-.PHONY : math3D.o
-
-# target to build an object file
-math3D.cpp.o:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.o
-.PHONY : math3D.cpp.o
-
-math3D.i: math3D.cpp.i
-
-.PHONY : math3D.i
-
-# target to preprocess a source file
-math3D.cpp.i:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.i
-.PHONY : math3D.cpp.i
-
-math3D.s: math3D.cpp.s
-
-.PHONY : math3D.s
-
-# target to generate assembly for a file
-math3D.cpp.s:
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.s
-.PHONY : math3D.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,24 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... projeto-leitura"
-	@echo "... Decimate.o"
-	@echo "... Decimate.i"
-	@echo "... Decimate.s"
-	@echo "... Gyroid.o"
-	@echo "... Gyroid.i"
-	@echo "... Gyroid.s"
-	@echo "... Isosurface.o"
-	@echo "... Isosurface.i"
-	@echo "... Isosurface.s"
-	@echo "... Sphere.o"
-	@echo "... Sphere.i"
-	@echo "... Sphere.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... math3D.o"
-	@echo "... math3D.i"
-	@echo "... math3D.s"
 .PHONY : help
 
 

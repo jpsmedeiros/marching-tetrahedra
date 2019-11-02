@@ -84,43 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Array3D.h">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.h">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.h">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.h">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.h">
-			<Option target="projeto-leitura"/>
-		</Unit>
 		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/common.h">
 			<Option target="projeto-leitura"/>
 		</Unit>
 		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/main.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.cpp">
-			<Option target="projeto-leitura"/>
-		</Unit>
-		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.h">
 			<Option target="projeto-leitura"/>
 		</Unit>
 		<Unit filename="/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/CMakeLists.txt">
