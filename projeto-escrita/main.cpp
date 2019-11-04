@@ -30,7 +30,7 @@ int main (int argc, char * argv[])
         startTime = MPI_Wtime();
 
     Gyroid surface;
-    int x0 = -10;
+    int x0 = -20;
     int h = -x0 / n_processes; // todo: virar float
     int xMin = x0 + (h * process_id);
     int xMax = xMin + h;
@@ -42,17 +42,17 @@ int main (int argc, char * argv[])
 
     if (process_id == 0){
         endTime = MPI_Wtime();
-        sleep(1);
-        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
+        //sleep(1);
+        //cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
     }
 
     MPI_Finalize ();
 
     if (process_id == 0)
     {
-        cout << "\n";
-        cout << "Normal end of execution.\n";
-        cout << "\n";
+        //cout << "\n";
+        //cout << "Normal end of execution.\n";
+        //cout << "\n";
     }
 
     return 0;

@@ -19,7 +19,7 @@ Para instalar o MPI na sua máquina
 
 Após isso adicione essa linha ao seu .bashrc e reinicie seu terminal:
 
-	export PATH=$PATH:$HOME/openmpi/bin
+	export PATH=$PATH:$HOME/openmpi/bin1
 
 
 

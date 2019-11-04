@@ -57,105 +57,9 @@ include CMakeFiles/projeto-leitura.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/projeto-leitura.dir/flags.make
 
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.o: ../Decimate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projeto-leitura.dir/Decimate.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/Decimate.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.cpp
-
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-leitura.dir/Decimate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.cpp > CMakeFiles/projeto-leitura.dir/Decimate.cpp.i
-
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-leitura.dir/Decimate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Decimate.cpp -o CMakeFiles/projeto-leitura.dir/Decimate.cpp.s
-
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.requires
-
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.provides: CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.provides
-
-CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/Decimate.cpp.o
-
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o: ../Gyroid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.cpp
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-leitura.dir/Gyroid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.cpp > CMakeFiles/projeto-leitura.dir/Gyroid.cpp.i
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-leitura.dir/Gyroid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Gyroid.cpp -o CMakeFiles/projeto-leitura.dir/Gyroid.cpp.s
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.requires
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.provides: CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.provides
-
-CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o
-
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o: ../Isosurface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.cpp
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-leitura.dir/Isosurface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.cpp > CMakeFiles/projeto-leitura.dir/Isosurface.cpp.i
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-leitura.dir/Isosurface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Isosurface.cpp -o CMakeFiles/projeto-leitura.dir/Isosurface.cpp.s
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.requires
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.provides: CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.provides
-
-CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o
-
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.o: ../Sphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projeto-leitura.dir/Sphere.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/Sphere.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.cpp
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-leitura.dir/Sphere.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.cpp > CMakeFiles/projeto-leitura.dir/Sphere.cpp.i
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-leitura.dir/Sphere.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/Sphere.cpp -o CMakeFiles/projeto-leitura.dir/Sphere.cpp.s
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.requires
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.provides: CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.provides
-
-CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/Sphere.cpp.o
-
-
 CMakeFiles/projeto-leitura.dir/main.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
 CMakeFiles/projeto-leitura.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projeto-leitura.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projeto-leitura.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/main.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/main.cpp
 
 CMakeFiles/projeto-leitura.dir/main.cpp.i: cmake_force
@@ -177,48 +81,14 @@ CMakeFiles/projeto-leitura.dir/main.cpp.o.provides: CMakeFiles/projeto-leitura.d
 CMakeFiles/projeto-leitura.dir/main.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/main.cpp.o
 
 
-CMakeFiles/projeto-leitura.dir/math3D.cpp.o: CMakeFiles/projeto-leitura.dir/flags.make
-CMakeFiles/projeto-leitura.dir/math3D.cpp.o: ../math3D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projeto-leitura.dir/math3D.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/projeto-leitura.dir/math3D.cpp.o -c /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.cpp
-
-CMakeFiles/projeto-leitura.dir/math3D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto-leitura.dir/math3D.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.cpp > CMakeFiles/projeto-leitura.dir/math3D.cpp.i
-
-CMakeFiles/projeto-leitura.dir/math3D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto-leitura.dir/math3D.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/math3D.cpp -o CMakeFiles/projeto-leitura.dir/math3D.cpp.s
-
-CMakeFiles/projeto-leitura.dir/math3D.cpp.o.requires:
-
-.PHONY : CMakeFiles/projeto-leitura.dir/math3D.cpp.o.requires
-
-CMakeFiles/projeto-leitura.dir/math3D.cpp.o.provides: CMakeFiles/projeto-leitura.dir/math3D.cpp.o.requires
-	$(MAKE) -f CMakeFiles/projeto-leitura.dir/build.make CMakeFiles/projeto-leitura.dir/math3D.cpp.o.provides.build
-.PHONY : CMakeFiles/projeto-leitura.dir/math3D.cpp.o.provides
-
-CMakeFiles/projeto-leitura.dir/math3D.cpp.o.provides.build: CMakeFiles/projeto-leitura.dir/math3D.cpp.o
-
-
 # Object files for target projeto-leitura
 projeto__leitura_OBJECTS = \
-"CMakeFiles/projeto-leitura.dir/Decimate.cpp.o" \
-"CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o" \
-"CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o" \
-"CMakeFiles/projeto-leitura.dir/Sphere.cpp.o" \
-"CMakeFiles/projeto-leitura.dir/main.cpp.o" \
-"CMakeFiles/projeto-leitura.dir/math3D.cpp.o"
+"CMakeFiles/projeto-leitura.dir/main.cpp.o"
 
 # External object files for target projeto-leitura
 projeto__leitura_EXTERNAL_OBJECTS =
 
-projeto-leitura: CMakeFiles/projeto-leitura.dir/Decimate.cpp.o
-projeto-leitura: CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o
-projeto-leitura: CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o
-projeto-leitura: CMakeFiles/projeto-leitura.dir/Sphere.cpp.o
 projeto-leitura: CMakeFiles/projeto-leitura.dir/main.cpp.o
-projeto-leitura: CMakeFiles/projeto-leitura.dir/math3D.cpp.o
 projeto-leitura: CMakeFiles/projeto-leitura.dir/build.make
 projeto-leitura: /usr/lib/x86_64-linux-gnu/libGL.so
 projeto-leitura: /usr/lib/x86_64-linux-gnu/libGLU.so
@@ -226,7 +96,7 @@ projeto-leitura: /usr/lib/x86_64-linux-gnu/libglut.so
 projeto-leitura: /usr/lib/x86_64-linux-gnu/libXmu.so
 projeto-leitura: /usr/lib/x86_64-linux-gnu/libXi.so
 projeto-leitura: CMakeFiles/projeto-leitura.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable projeto-leitura"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable projeto-leitura"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projeto-leitura.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -234,12 +104,7 @@ CMakeFiles/projeto-leitura.dir/build: projeto-leitura
 
 .PHONY : CMakeFiles/projeto-leitura.dir/build
 
-CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/Decimate.cpp.o.requires
-CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/Gyroid.cpp.o.requires
-CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/Isosurface.cpp.o.requires
-CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/Sphere.cpp.o.requires
 CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/main.cpp.o.requires
-CMakeFiles/projeto-leitura.dir/requires: CMakeFiles/projeto-leitura.dir/math3D.cpp.o.requires
 
 .PHONY : CMakeFiles/projeto-leitura.dir/requires
 
