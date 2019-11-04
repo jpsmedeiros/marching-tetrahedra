@@ -176,7 +176,6 @@ void initAndStartLoop(){
 
 int main (int argc, char * argv[])
 {
-    assert(sizeof(char) == 1);
     glutInit(&argc, argv);
     initAndStartLoop();
     return 0;

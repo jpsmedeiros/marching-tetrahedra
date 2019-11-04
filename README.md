@@ -1,12 +1,8 @@
 # marching-tetrahedra
 
-### Instalando e rodando no Ubuntu  
+### Instalando no Ubuntu
 	
 	$ sudo apt-get install build-essential freeglut3-dev libxmu-dev libxi-dev
-
-Compile usando nosso script  
-
-	$ ./compile.sh arquivo.cpp output.o 
 
 ### MPI
 
@@ -25,11 +21,32 @@ Após isso adicione essa linha ao seu .bashrc e reinicie seu terminal:
 
 	export PATH=$PATH:$HOME/openmpi/bin
 
-Para rodar o programa:
 
-	mpicc main.cpp -o main.o
-	mpirun -np X -mca plm_rsh_no_tree_spawn 1 main.o
 
-OBS: -np X , onde X representa o número de processos a serem criados  
-OBS2: a opção -mca plm_rsh_no_tree_spawn 1 é útil apenas se você precisar que o MPI não distribua a operação por SSH em modo de árvore  
-do nó A pro B depois do B pro C. Com essa opção, as SSH's exxecutadas para fazer operações de inicialização são a partir do nó A para os outros nós apenas.
+## Projeto Escrita
+
+Nessa pasta encontra-se o programa que vai rodar no oscar.  
+Ele é responsável por gerar o arquivo com os pontos de superfície e normais para a   
+renderização final (pelo projeto-leitura) e também contém a lógica do MPI para ser executado 
+  em paralelo no cluster.
+
+Compile e rode com mpi usando nosso script  
+(o único parâmetro é o nº de processos para ser passado ao MPI)
+
+	$ ./compile.sh 8
+	
+Para compilar no cluster
+
+    $ /var/programas/openmpi-1.8.4/bin/mpic++ Decimate.cpp Isosurface.cpp Gyroid.cpp math3D.cpp main.cpp -o main.o	
+
+## Projeto Leitura
+
+Nessa pasta encontra-se o programa que efetivamente lê o resultado do arquivo com os pontos  
+necessários gerado pelo projeto-escrita e exibe na tela a imagem resultando utilizando openGL.
+
+
+Compile com cmake:
+    
+    $ cd projeto-leitura/build
+    $ cmake --build .
+    $ cmake ..

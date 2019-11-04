@@ -4,6 +4,7 @@
 #include <mpi.h>
 #include <unistd.h>
 #include <cmath>
+#include <cstdlib>
 
 using namespace std;
 
@@ -33,7 +34,8 @@ int main (int argc, char * argv[])
     int h = -x0 / n_processes; // todo: virar float
     int xMin = x0 + (h * process_id);
     int xMax = xMin + h;
-    double res = 50 / cbrt (n_processes); // todo: modelar corretamente? (falar com prof)
+    int input_res = atoi(argv[1]);
+    double res = input_res / cbrt (n_processes);
     decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, res);
 
     MPI_Barrier(MPI_COMM_WORLD);
