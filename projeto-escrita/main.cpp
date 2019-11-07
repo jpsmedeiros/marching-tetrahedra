@@ -31,9 +31,9 @@ int main (int argc, char * argv[])
 
     Gyroid surface;
     int x0 = -20;
-    int h = -x0 / n_processes; // todo: virar float
-    int xMin = x0 + (h * process_id);
-    int xMax = xMin + h;
+    float h = -x0 / n_processes;
+    float xMin = x0 + (h * process_id);
+    float xMax = xMin + h;
     int input_res = atoi(argv[1]);
     double res = input_res / cbrt (n_processes);
     decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, res);
@@ -42,18 +42,11 @@ int main (int argc, char * argv[])
 
     if (process_id == 0){
         endTime = MPI_Wtime();
-        //sleep(1);
-        //cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
+//        sleep(1);
+//        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
     }
 
     MPI_Finalize ();
-
-    if (process_id == 0)
-    {
-        //cout << "\n";
-        //cout << "Normal end of execution.\n";
-        //cout << "\n";
-    }
 
     return 0;
 }

@@ -114,7 +114,7 @@ float* extractLineData(std::string line) {
 }
 
 void setSurfaceData() {
-    std::ifstream file("/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/build/output.o");
+    std::ifstream file("/Users/gpergola/files/uff/marching-tetrahedra/projeto-escrita/out.o");
     std::string lineData;
     float * float_points;
     while (std::getline(file, lineData)) {

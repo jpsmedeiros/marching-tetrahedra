@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/common.h
+/Users/gpergola/files/uff/marching-tetrahedra/projeto-leitura/common.h
 
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/main.cpp
+/Users/gpergola/files/uff/marching-tetrahedra/projeto-leitura/main.cpp
 iostream
 -
 cstdlib
@@ -16,7 +16,7 @@ cstdlib
 cassert
 -
 common.h
-/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/common.h
+/Users/gpergola/files/uff/marching-tetrahedra/projeto-leitura/common.h
 fstream
 -
 string.h

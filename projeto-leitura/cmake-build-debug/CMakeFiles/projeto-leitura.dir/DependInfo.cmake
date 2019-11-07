@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/main.cpp" "/home/gpergola/files/uff/tcc/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/projeto-leitura.dir/main.cpp.o"
+  "/Users/gpergola/files/uff/marching-tetrahedra/projeto-leitura/main.cpp" "/Users/gpergola/files/uff/marching-tetrahedra/projeto-leitura/cmake-build-debug/CMakeFiles/projeto-leitura.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
