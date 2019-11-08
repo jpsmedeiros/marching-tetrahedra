@@ -31,9 +31,14 @@ renderização final (pelo projeto-leitura) e também contém a lógica do MPI p
   em paralelo no cluster.
 
 Compile e rode com mpi usando nosso script  
-(o primeiro parâmetro é o nº de processos para ser passado ao MPI e o segundo é a resolução para renderizarmos a imagem)
+o primeiro parâmetro é o nº de processos para ser passado ao MPI  
+o segundo é a resolução para renderizarmos a imagem  
+o terceiro é o método a ser utilizado
 
-	$ ./compile.sh 8 400
+método 1 -> distribui o processamento sem exibição dos dados  
+método 2 -> distirbui o processamento com a exibição dos dados por parte do nó mestre
+
+	$ ./compile.sh 8 400 1
 	
 Para compilar no cluster
 
