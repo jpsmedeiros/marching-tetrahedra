@@ -30,12 +30,14 @@ int main (int argc, char * argv[])
         startTime = MPI_Wtime();
 
     Gyroid surface;
-    int x0 = -20;
-    float h = -x0 / n_processes;
+    int x0 = -10;
+    float h = 2 * abs(x0) / (n_processes);
     float xMin = x0 + (h * process_id);
     float xMax = xMin + h;
     int input_res = atoi(argv[1]);
     double res = input_res / cbrt (n_processes);
+    //cout << "XMAX " << xMax << "\n";
+    //cout << "XMIN " << xMin << "\n";
     decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, res);
 
     MPI_Barrier(MPI_COMM_WORLD);
