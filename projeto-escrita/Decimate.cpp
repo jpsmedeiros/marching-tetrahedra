@@ -43,9 +43,9 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
         z = p1.z * oneMinusInterp + p2.z * interp;
     }
 
-    cout << "s," << x << ',' << y << ',' << z << '\n';
-    Vector3D normal = surface.gradientAt(x, y, z);
-    cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
+    //cout << "s," << x << ',' << y << ',' << z << '\n';
+    //Vector3D normal = surface.gradientAt(x, y, z);
+    //cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
 }
 
 static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
@@ -209,14 +209,15 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
 
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
-              float yMin, float yMax,
-              float zMin, float zMax,
               float isolevel,
-              size_t resolution) // resolution indicates # of cubes -> the more the slower
+              size_t resolution, int method) // resolution indicates # of cubes -> the more the slower
 {
-//    cout << "xMin: " << xMin << " xMax: " << xMax << "\n";
     size_t pointRes = resolution + 1; // indicates the # of points per side
 
+    float yMin = xMin;
+    float zMin = xMin;
+    float yMax = xMax;
+    float zMax = xMax;
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
@@ -237,8 +238,6 @@ void decimate(const Isosurface& surface,
         }
     }
 
-//     cout << "Count: " << count * 1 << "\n";
-
     for (size_t i = 0; i < resolution; ++i) {
         float x1 = (float)i/resolution * xrange + xMin;
         float x2 = (float)(i+1)/resolution * xrange + xMin;
@@ -248,9 +247,6 @@ void decimate(const Isosurface& surface,
             for (size_t k = 0; k < resolution; ++k) {
                 float z2 = (float)(k+1)/resolution * zrange + zMin;
                 float z1 = (float)k/resolution * zrange + zMin;
-//                cout << "x1" << x1 << " x2" << x2 << "\n";
-//                cout << "y1" << y1 << " y2" << y2 << "\n";
-//                cout << "z1" << z1 << " z2" << z2 << "\n";
 
                 /*
 

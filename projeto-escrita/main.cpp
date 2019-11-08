@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <cmath>
 #include <cstdlib>
+#include "LinkedList.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ void process_images() {
     float xMin = x0 + (h * process_id);
     float xMax = xMin + h;
     double res = input_res / cbrt (n_processes);
-    decimate(surface, xMin, xMax, xMin, xMax, xMin, xMax, -1, res);
+    decimate(surface, xMin, xMax, -1, res, method);
 }
 
 void method1() {
@@ -47,10 +48,17 @@ void method2() {
         // Recebe a quantidade de arrays de quatro pontos flutuantes que vai receber do processo
         for (int i = 1; i < n_processes; i++){
             MPI_Recv(&n_arrays, 1, MPI_INT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            cout << "N Arrays: " << n_arrays << " process:" << i << "\n";
+            cout << "N Arrays: " << n_arrays << " process: " << i << "\n";
         }
     } else {
-        process_images();
+        //process_images();
+        LinkedList* list = new LinkedList();
+        for (int i = 0; i < 67; ++i)
+        {
+            list->add(rand() % 100, rand() % 100, rand() % 100, -1);
+        }
+        MPI_Send(&list->length, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
+        delete list;
     }
 
 }

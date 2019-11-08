@@ -11,7 +11,8 @@ add_executable(projeto-escrita
     Isosurface.cpp
     main.cpp
     math3D.h
-    math3D.cpp)
+    math3D.cpp
+    LinkedList.h LinkedList.cpp)
 
 target_link_libraries(projeto-escrita
         PRIVATE
