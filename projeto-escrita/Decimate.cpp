@@ -3,8 +3,11 @@
 #include <cmath>
 #include "Decimate.h"
 #include "Array3D.h"
+#include "LinkedList.h"
 
 using namespace std;
+
+LinkedList* resultsList = NULL;
 
 static inline void drawVert(const Isosurface& surface, const Point3D& p1, const Point3D& p2, float isolevel)
 {
@@ -43,9 +46,17 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
         z = p1.z * oneMinusInterp + p2.z * interp;
     }
 
-    //cout << "s," << x << ',' << y << ',' << z << '\n';
-    //Vector3D normal = surface.gradientAt(x, y, z);
-    //cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
+    Vector3D normal = surface.gradientAt(x, y, z);
+
+    if (resultsList != NULL) {
+        resultsList->add(x, y, z, -1);
+        resultsList->add(normal.x, normal.y, normal.z, 1);
+    }else {
+        cout << "s," << x << ',' << y << ',' << z << '\n';
+        cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
+    };
+
+
 }
 
 static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
@@ -210,8 +221,10 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
               float isolevel,
-              size_t resolution, int method) // resolution indicates # of cubes -> the more the slower
+              size_t resolution, // resolution indicates # of cubes -> the more the slower
+              LinkedList* list)
 {
+    resultsList = list;
     size_t pointRes = resolution + 1; // indicates the # of points per side
 
     float yMin = xMin;

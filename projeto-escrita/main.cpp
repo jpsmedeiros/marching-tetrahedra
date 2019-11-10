@@ -14,14 +14,14 @@ int n_processes;
 int method;
 int input_res;
 
-void process_images() {
+void process_images(LinkedList* list) {
     Gyroid surface;
     int x0 = -10;
     float h = 2 * abs(x0) / (n_processes);
     float xMin = x0 + (h * process_id);
     float xMax = xMin + h;
     double res = input_res / cbrt (n_processes);
-    decimate(surface, xMin, xMax, -1, res, method);
+    decimate(surface, xMin, xMax, -1, res, list);
 }
 
 void method1() {
@@ -30,7 +30,7 @@ void method1() {
     if (process_id == 0) {
         startTime = MPI_Wtime();
     } else {
-        process_images();
+        process_images(NULL);
     }
 
     MPI_Barrier(MPI_COMM_WORLD);
@@ -51,13 +51,10 @@ void method2() {
             cout << "N Arrays: " << n_arrays << " process: " << i << "\n";
         }
     } else {
-        //process_images();
         LinkedList* list = new LinkedList();
-        for (int i = 0; i < 67; ++i)
-        {
-            list->add(rand() % 100, rand() % 100, rand() % 100, -1);
-        }
+        process_images(list);
         MPI_Send(&list->length, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
+        list->print();
         delete list;
     }
 

@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include "Isosurface.h"
+#include "LinkedList.h"
 
 //
 // decimate
@@ -15,6 +16,6 @@
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
               float isolevel,
-              size_t resolution, int method);
+              size_t resolution, LinkedList* list);
 
 #endif
