@@ -46,15 +46,22 @@ void method2() {
     if (process_id == 0) {
         int n_arrays = 0;
         // Recebe a quantidade de arrays de quatro pontos flutuantes que vai receber do processo
-        for (int i = 1; i < n_processes; i++){
+        for (int i = 1; i < n_processes; i++) {
             MPI_Recv(&n_arrays, 1, MPI_INT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            cout << "N Arrays: " << n_arrays << " process: " << i << "\n";
+            float vector_recv[4];
+            char type;
+            for (int j = 0; j < n_arrays - 10; j++) {
+                type = 's';
+                MPI_Recv(&vector_recv, 4, MPI_FLOAT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+                if (vector_recv[3] > 0) type = 'n';
+                std::cout << type << "," << vector_recv[0] << ',' << vector_recv[1] << ',' << vector_recv[2] << std::endl;
+            }
         }
     } else {
         LinkedList* list = new LinkedList();
         process_images(list);
         MPI_Send(&list->length, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
-        list->print();
+        list->send();
         delete list;
     }
 
