@@ -18,10 +18,11 @@ class LinkedList {
 public:
     int length;
     Node* head;
+    Node* tail;
 
     LinkedList();
     void add(float x, float y, float z, float type);
     void print();
-    void send();
+    void send(int chunk_size, int comm_array_size);
 };
 #endif //PROJETO_ESCRITA_LINKEDLIST_H

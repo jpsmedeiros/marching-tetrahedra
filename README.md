@@ -34,11 +34,12 @@ Compile e rode com mpi usando nosso script
 o primeiro parâmetro é o nº de processos para ser passado ao MPI  
 o segundo é a resolução para renderizarmos a imagem  
 o terceiro é o método a ser utilizado
+o quarto é o chunk_size, quantidade de arrays de vetores que serão enviados ao nó mestre no método 2
 
 método 1 -> distribui o processamento sem exibição dos dados  
 método 2 -> distirbui o processamento com a exibição dos dados por parte do nó mestre
 
-	$ ./compile.sh 8 400 1
+	$ ./compile.sh 8 400 1 1
 	
 Para compilar no cluster
 

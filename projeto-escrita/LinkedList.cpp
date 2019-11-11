@@ -5,6 +5,7 @@
 LinkedList::LinkedList(){
     this->length = 0;
     this->head = NULL;
+    this->tail = NULL;
 }
 
 void LinkedList::add(float x, float y, float z, float type){
@@ -13,8 +14,13 @@ void LinkedList::add(float x, float y, float z, float type){
     node->y = y;
     node->z = z;
     node->type = type;
-    node->next = this->head;
-    this->head = node;
+    if (this->head == NULL) {
+        this->head = node;
+    } else {
+        this->tail->next = node;
+    }
+    node->next = NULL;
+    this->tail = node;
     this->length++;
 }
 
@@ -30,15 +36,20 @@ void LinkedList::print(){
     }
 }
 
-void LinkedList::send(){
+void LinkedList::send(int chunk_size, int comm_array_size){
     Node* head = this->head;
-    float vector[4];
+    float vector[chunk_size][comm_array_size];
+    int i = 0;
     while(head){
-        vector[0] = head->x;
-        vector[1] = head->y;
-        vector[2] = head->z;
-        vector[3] = head->type;
-        MPI_Send(&vector, 4, MPI_FLOAT, 0, 0, MPI_COMM_WORLD);
+        vector[i][0] = head->x;
+        vector[i][1] = head->y;
+        vector[i][2] = head->z;
+        vector[i][3] = head->type;
+        if (i + 1 == chunk_size || !head->next) {
+            MPI_Send(&vector, chunk_size * comm_array_size, MPI_FLOAT, 0, 0, MPI_COMM_WORLD);
+            i = -1;
+        }
         head = head->next;
+        i++;
    }
 }
