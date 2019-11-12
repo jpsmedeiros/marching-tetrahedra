@@ -4,6 +4,7 @@
 float Gyroid::valueAt(float x, float y, float z) const
 {
     return (cosf(x) * sinf(y) + cosf(y) * sinf(z) + cosf(z) * sinf(x));
+//    return sqrtf(x*x + y*y + z*z);
 }
 
 Vector3D Gyroid::gradientAt(float x, float y, float z) const
@@ -16,4 +17,7 @@ Vector3D Gyroid::gradientAt(float x, float y, float z) const
     normalize(result);
 
     return result;
+//    Vector3D grad = { x, y, z };
+//    normalize(grad);
+//    return grad;
 }

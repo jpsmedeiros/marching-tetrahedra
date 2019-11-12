@@ -15,6 +15,8 @@
 
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
+              float yMin, float yMax,
+              float zMin, float zMax,
               float isolevel,
               size_t resolution, LinkedList* list);
 

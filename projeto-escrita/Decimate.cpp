@@ -220,6 +220,8 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
 
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
+              float yMin, float yMax,
+              float zMin, float zMax,
               float isolevel,
               size_t resolution, // resolution indicates # of cubes -> the more the slower
               LinkedList* list)
@@ -227,10 +229,6 @@ void decimate(const Isosurface& surface,
     resultsList = list;
     size_t pointRes = resolution + 1; // indicates the # of points per side
 
-    float yMin = xMin;
-    float zMin = xMin;
-    float yMax = xMax;
-    float zMax = xMax;
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;

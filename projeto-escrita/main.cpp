@@ -17,12 +17,13 @@ int chunk_size;
 
 void process_images(LinkedList* list) {
     Gyroid surface;
-    int x0 = -10;
-    float h = 2 * abs(x0) / (n_processes);
-    float xMin = x0 + (h * process_id);
+    int x0 = -15;
+    float h = 2 * abs(x0) / (n_processes - 1);
+    float xMin = x0 + (h * (process_id - 1));
     float xMax = xMin + h;
-    double res = input_res / cbrt (n_processes);
-    decimate(surface, xMin, xMax, -1, res, list);
+    double res = cbrt( input_res / cbrt (n_processes - 1);
+    cout << "res " << res << '\n';
+    decimate(surface, xMin, xMax, x0, -x0, x0, -x0, -1, res, list);
 }
 
 void method1() {
@@ -48,18 +49,19 @@ void print_method2(float chunk_recv_matrix[][4], int size){
     for (int i = 0; i < size; i++) {
         type = 's';
         if (chunk_recv_matrix[i][3] > 0) type = 'n';
-        cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << '\n';
+        //cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << '\n';
     }
 }
 
 void method2() {
     if (process_id == 0) {
-        int n_arrays = 0, i = 1, j = 0, diff_last_chunk = 0;
+        int n_arrays = 0, i = 1, j = 0, diff_last_chunk = 0, n_arrays_sum = 0;
         float chunk_recv_matrix[chunk_size][4];
         float number_of_chunks = 0;
 
         for (i = 1; i < n_processes; i++) {
             MPI_Recv(&n_arrays, 1, MPI_INT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE); // pega o número de pontos que vai enviar
+            n_arrays_sum += n_arrays;
             number_of_chunks = n_arrays / chunk_size; // número de vezes que vai receber dados
             diff_last_chunk = n_arrays % chunk_size; // diferença pra quando for enviar o último pacote de dados (se houver diferença)
             for (j = 0; j < number_of_chunks; j++) {
@@ -71,6 +73,7 @@ void method2() {
                 print_method2(chunk_recv_matrix, diff_last_chunk);
             }
         }
+        //cout << "n arrays " << n_arrays_sum << "process " << process_id << '\n';
     } else {
         LinkedList* list = new LinkedList();
         process_images(list);
