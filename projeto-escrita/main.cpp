@@ -21,8 +21,8 @@ void process_images(LinkedList* list) {
     float h = 2 * abs(x0) / (n_processes - 1);
     float xMin = x0 + (h * (process_id - 1));
     float xMax = xMin + h;
-    double res = cbrt( input_res / cbrt (n_processes - 1);
-    cout << "res " << res << '\n';
+    double res = cbrt( input_res /  (n_processes - 1));
+    //cout << "res " << res << '\n';
     decimate(surface, xMin, xMax, x0, -x0, x0, -x0, -1, res, list);
 }
 
@@ -44,12 +44,12 @@ void method1() {
     }
 }
 
-void print_method2(float chunk_recv_matrix[][4], int size){
+void print_method2(float chunk_recv_matrix[][4], int size, int process){
     char type;
     for (int i = 0; i < size; i++) {
         type = 's';
         if (chunk_recv_matrix[i][3] > 0) type = 'n';
-        //cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << '\n';
+        cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
     }
 }
 
@@ -66,11 +66,11 @@ void method2() {
             diff_last_chunk = n_arrays % chunk_size; // diferença pra quando for enviar o último pacote de dados (se houver diferença)
             for (j = 0; j < number_of_chunks; j++) {
                 MPI_Recv(&chunk_recv_matrix, chunk_size * 4, MPI_FLOAT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                print_method2(chunk_recv_matrix, chunk_size);
+                print_method2(chunk_recv_matrix, chunk_size, i);
             }
             if (diff_last_chunk > 0) {
                 MPI_Recv(&chunk_recv_matrix, chunk_size * 4, MPI_FLOAT, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                print_method2(chunk_recv_matrix, diff_last_chunk);
+                print_method2(chunk_recv_matrix, diff_last_chunk, i);
             }
         }
         //cout << "n arrays " << n_arrays_sum << "process " << process_id << '\n';
