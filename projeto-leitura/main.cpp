@@ -101,16 +101,31 @@ void mouseDragged(int x, int y)
 }
 
 float* extractLineData(std::string line) {
-    float *extractedData = new float[3];
+    float *extractedData = new float[4];
     char data[line.size() + 1];
     char * actual;
     strcpy(data, line.c_str());
     actual = strtok(data, ",");
-    for (int i = 0; i < 3 && actual != NULL; i++ ){
+    for (int i = 0; i < 4 && actual != NULL; i++ ){
         actual = strtok (NULL, ",");
         extractedData[i] = atof(actual);
     }
     return extractedData;
+}
+
+void setColor(float process) {
+    float rgb[8][3] = {
+                {1, 0, 0},
+                {1, 1, 0},
+                {1, 1, 1},
+                {0, 1, 1},
+                {0, 0, 1},
+                {0, 0, 0},
+                {0, 1, 0},
+                {1, 0, 1} };
+    int process_int = static_cast<int>(process);
+    glColor3f(rgb[process_int][0], rgb[process_int][1], rgb[process_int][2]);
+
 }
 
 void setSurfaceData() {
@@ -119,6 +134,7 @@ void setSurfaceData() {
     float * float_points;
     while (std::getline(file, lineData)) {
         float_points = extractLineData(lineData);
+        setColor(float_points[3]);
         if (lineData[0] == 's') {
             glVertex3f(float_points[0], float_points[1], float_points[2]);
         }else {
@@ -145,7 +161,7 @@ void init()
     glEnable(GL_NORMALIZE);
     glEnable(GL_CULL_FACE);
 
-    glEnable(GL_LIGHTING);
+    //glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
 
     list = drawImage();
