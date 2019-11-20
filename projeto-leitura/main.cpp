@@ -114,7 +114,7 @@ float* extractLineData(std::string line) {
 }
 
 void setColor(float process) {
-    float rgb[8][3] = {
+    float rgb[16][3] = {
                 {1, 0, 0},
                 {1, 1, 0},
                 {1, 1, 1},
@@ -122,7 +122,15 @@ void setColor(float process) {
                 {0, 0, 1},
                 {0, 0, 0},
                 {0, 1, 0},
-                {1, 0, 1} };
+                {0.5, 0, 0.5},
+                {0.5, 0, 0},
+                {0.5, 0.5, 0},
+                {0.5, 0.5, 0.5},
+                {0, 0.5, 0.5},
+                {0, 0, 0.5},
+                {0, 0, 0},
+                {0, 1, 0},
+                {0.5, 0, 0.5}};
     int process_int = static_cast<int>(process);
     glColor3f(rgb[process_int][0], rgb[process_int][1], rgb[process_int][2]);
 
