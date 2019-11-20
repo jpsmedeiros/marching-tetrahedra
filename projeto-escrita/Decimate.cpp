@@ -235,22 +235,23 @@ void decimate(const Isosurface& surface,
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
 
-    size_t pointResX = res_h + offset_res_x + 1;
-    float grid[pointResX][pointRes][pointRes], x, x1, x2;
+    float grid[res_h + 1][pointRes][pointRes], x, x1, x2;
 
-    for (int i = offset_res_x; i <= res_h + offset_res_x; ++i) {
+    int gridPositionX;
+
+    for (int i = offset_res_x, gridPositionX = 0; i <= res_h + offset_res_x; ++i, ++gridPositionX) {
         x = (float) (i)/res_h * xrange + xMin;
         for (size_t j = 0; j <= resolution; ++j) {
             float y = (float)j/resolution * yrange + yMin;
             for (size_t k = 0; k <= resolution; ++k) {
                 float z = (float)k/resolution * zrange + zMin;
                 float value = surface.valueAt(x, y, z);
-                grid[i][j][k] = value;
+                grid[gridPositionX][j][k] = value;
             }
         }
     }
 
-    for (int i = offset_res_x; i < res_h + offset_res_x; ++i) {
+    for (int i = offset_res_x, gridPositionX = 0; i < res_h + offset_res_x; ++i, ++gridPositionX) {
         x1 = (float)(i)/res_h * xrange + xMin;
         x2 = (float)(i + 1)/res_h * xrange + xMin;
         for (size_t j = 0; j < resolution; ++j) {
@@ -294,14 +295,14 @@ void decimate(const Isosurface& surface,
                  */
 
                 const Point3D v[8] = {
-                    {x1, y1, z1, grid[i][j][k]},
-                    {x2, y1, z1, grid[i+1][j][k]},
-                    {x2, y2, z1, grid[i+1][j+1][k]},
-                    {x1, y2, z1, grid[i][j+1][k]},
-                    {x1, y1, z2, grid[i][j][k+1]},
-                    {x2, y1, z2, grid[i+1][j][k+1]},
-                    {x2, y2, z2, grid[i+1][j+1][k+1]},
-                    {x1, y2, z2, grid[i][j+1][k+1]}
+                    {x1, y1, z1, grid[gridPositionX][j][k]},
+                    {x2, y1, z1, grid[gridPositionX+1][j][k]},
+                    {x2, y2, z1, grid[gridPositionX+1][j+1][k]},
+                    {x1, y2, z1, grid[gridPositionX][j+1][k]},
+                    {x1, y1, z2, grid[gridPositionX][j][k+1]},
+                    {x2, y1, z2, grid[gridPositionX+1][j][k+1]},
+                    {x2, y2, z2, grid[gridPositionX+1][j+1][k+1]},
+                    {x1, y2, z2, grid[gridPositionX][j+1][k+1]}
                 };
 
                 const Point3D tetrahedra[6][4] = {
