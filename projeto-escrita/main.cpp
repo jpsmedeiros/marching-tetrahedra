@@ -6,6 +6,7 @@
 #include <cmath>
 #include <cstdlib>
 #include "LinkedList.h"
+#include "Array3D.h"
 
 using namespace std;
 
@@ -19,11 +20,12 @@ void process_images(LinkedList* list) {
     Gyroid surface;
     int x0 = -15;
     float h = 2 * abs(x0) / (n_processes - 1);
-    float xMin = x0 + (h * (process_id - 1));
+    float xMin = x0;// + (h * (process_id - 1));
     float xMax = xMin + h;
-    double res = cbrt( input_res /  (n_processes - 1));
-    //cout << "res " << res << '\n';
-    decimate(surface, xMin, xMax, x0, -x0, x0, -x0, -1, res, list);
+
+    //cout << "xMin: " << xMin << " xMax: " << xMax << " process: " << process_id << '\n';
+
+    decimate(surface, xMin, xMax, x0, -x0, x0, -x0, -1, input_res, list, process_id, n_processes);
 }
 
 void method1() {
@@ -49,7 +51,7 @@ void print_method2(float chunk_recv_matrix[][4], int size, int process){
     for (int i = 0; i < size; i++) {
         type = 's';
         if (chunk_recv_matrix[i][3] > 0) type = 'n';
-        cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
+         cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
     }
 }
 
@@ -105,6 +107,7 @@ int main (int argc, char * argv[])
     method = atoi(argv[2]);
     chunk_size = atoi(argv[3]);
     mpi_setup(MPI_Init(&argc, &argv));
+    //Array3D<float> grid(10, 31, 31);
     process_method(method);
     MPI_Finalize();
 

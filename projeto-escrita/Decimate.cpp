@@ -224,34 +224,39 @@ void decimate(const Isosurface& surface,
               float zMin, float zMax,
               float isolevel,
               size_t resolution, // resolution indicates # of cubes -> the more the slower
-              LinkedList* list)
+              LinkedList* list, int process_id, int n_processes)
 {
     resultsList = list;
     size_t pointRes = resolution + 1; // indicates the # of points per side
+    int res_h = (resolution / (n_processes - 1)); // indicates the # of points per side
+    int offset_res_x = res_h * (process_id - 1);
 
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
-    int count = 0;
 
-    Array3D<float> grid(pointRes, pointRes, pointRes);
+    Array3D<float> grid(res_h + offset_res_x + 1, pointRes, pointRes);
 
-    for (size_t i = 0; i <= resolution; ++i) {
-        float x = (float)i/resolution * xrange + xMin;
+    float x, x1, x2;
+
+    //cout << "offset_res_x: " << offset_res_x << " res_h: " << res_h << " process: " << process_id << "\n";
+
+    for (int i = offset_res_x; i <= res_h + offset_res_x; ++i) {
+        //cout << "last i " << (i + offset_x) << " process: " << process_id << "\n";
+        x = (float) (i)/res_h * xrange + xMin;
         for (size_t j = 0; j <= resolution; ++j) {
             float y = (float)j/resolution * yrange + yMin;
             for (size_t k = 0; k <= resolution; ++k) {
                 float z = (float)k/resolution * zrange + zMin;
                 float value = surface.valueAt(x, y, z);
                 grid.set(i, j, k, value);
-                count++;
             }
         }
     }
 
-    for (size_t i = 0; i < resolution; ++i) {
-        float x1 = (float)i/resolution * xrange + xMin;
-        float x2 = (float)(i+1)/resolution * xrange + xMin;
+    for (int i = offset_res_x; i < res_h + offset_res_x ; ++i) {
+        x1 = (float)(i)/res_h * xrange + xMin;
+        x2 = (float)(i + 1)/res_h * xrange + xMin;
         for (size_t j = 0; j < resolution; ++j) {
             float y1 = (float)j/resolution * yrange + yMin;
             float y2 = (float)(j+1)/resolution * yrange + yMin;
