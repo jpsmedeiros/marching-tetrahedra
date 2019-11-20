@@ -235,31 +235,36 @@ void decimate(const Isosurface& surface,
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
 
-    float grid[res_h + 1][pointRes][pointRes], x, x1, x2;
+    float grid[res_h + 1][pointRes][pointRes];
 
-    int gridPositionX;
+    float x, x1, x2;
+    float y, y1, y2;
+    float z, z1, z2;
+    float value;
 
-    for (int i = offset_res_x, gridPositionX = 0; i <= res_h + offset_res_x; ++i, ++gridPositionX) {
+    int gridPositionX, i;
+
+    for (i = offset_res_x, gridPositionX = 0; i <= res_h + offset_res_x; ++i, ++gridPositionX) {
         x = (float) (i)/res_h * xrange + xMin;
         for (size_t j = 0; j <= resolution; ++j) {
-            float y = (float)j/resolution * yrange + yMin;
+            y = (float)j/resolution * yrange + yMin;
             for (size_t k = 0; k <= resolution; ++k) {
-                float z = (float)k/resolution * zrange + zMin;
-                float value = surface.valueAt(x, y, z);
+                z = (float)k/resolution * zrange + zMin;
+                value = surface.valueAt(x, y, z);
                 grid[gridPositionX][j][k] = value;
             }
         }
     }
 
-    for (int i = offset_res_x, gridPositionX = 0; i < res_h + offset_res_x; ++i, ++gridPositionX) {
+    for (i = offset_res_x, gridPositionX = 0; i < res_h + offset_res_x; ++i, ++gridPositionX) {
         x1 = (float)(i)/res_h * xrange + xMin;
         x2 = (float)(i + 1)/res_h * xrange + xMin;
         for (size_t j = 0; j < resolution; ++j) {
-            float y1 = (float)j/resolution * yrange + yMin;
-            float y2 = (float)(j+1)/resolution * yrange + yMin;
+            y1 = (float)j/resolution * yrange + yMin;
+            y2 = (float)(j+1)/resolution * yrange + yMin;
             for (size_t k = 0; k < resolution; ++k) {
-                float z2 = (float)(k+1)/resolution * zrange + zMin;
-                float z1 = (float)k/resolution * zrange + zMin;
+                z2 = (float)(k+1)/resolution * zrange + zMin;
+                z1 = (float)k/resolution * zrange + zMin;
 
                 /*
 
