@@ -6,7 +6,6 @@
 #include <cmath>
 #include <cstdlib>
 #include "LinkedList.h"
-#include "Array3D.h"
 
 using namespace std;
 
@@ -20,23 +19,14 @@ void process_images(LinkedList* list) {
     Gyroid surface;
     int x0 = -15;
     float h = 2 * abs(x0) / (n_processes - 1);
-    float xMin = x0;// + (h * (process_id - 1));
-    float xMax = xMin + h;
-
-    //cout << "xMin: " << xMin << " xMax: " << xMax << " process: " << process_id << '\n';
-
-    decimate(surface, xMin, xMax, x0, -x0, x0, -x0, -1, input_res, list, process_id, n_processes);
+    float xMax = x0 + h;
+    decimate(surface, x0, xMax, x0, -x0, x0, -x0, -1, input_res, list, process_id, n_processes);
 }
 
 void method1() {
     double startTime = 0, endTime = 0;
-
-    if (process_id == 0) {
-        startTime = MPI_Wtime();
-    } else {
-        process_images(NULL);
-    }
-
+    startTime = MPI_Wtime();
+    process_images(NULL);
     MPI_Barrier(MPI_COMM_WORLD);
 
     if (process_id == 0) {
@@ -75,7 +65,6 @@ void method2() {
                 print_method2(chunk_recv_matrix, diff_last_chunk, i);
             }
         }
-        //cout << "n arrays " << n_arrays_sum << "process " << process_id << '\n';
     } else {
         LinkedList* list = new LinkedList();
         process_images(list);
@@ -84,7 +73,6 @@ void method2() {
         delete list;
     }
 }
-
 
 void process_method(int method) {
     if (method == 1)
@@ -106,10 +94,13 @@ int main (int argc, char * argv[])
     input_res = atoi(argv[1]);
     method = atoi(argv[2]);
     chunk_size = atoi(argv[3]);
-    mpi_setup(MPI_Init(&argc, &argv));
-    //Array3D<float> grid(10, 31, 31);
+    if (method != 1) {
+        mpi_setup(MPI_Init(&argc, &argv));
+    }
     process_method(method);
-    MPI_Finalize();
+    if (method != 1) {
+        MPI_Finalize();
+    }
 
     return 0;
 }
