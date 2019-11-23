@@ -52,8 +52,8 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
         resultsList->add(normal.x, normal.y, normal.z, 1);
         resultsList->add(x, y, z, -1);
     }else {
-        cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << '\n';
-        cout << "s," << x << ',' << y << ',' << z << '\n';
+        cout << "n," << normal.x << ',' << normal.y << ',' << normal.z << ",1.0" << '\n';
+        cout << "s," << x << ',' << y << ',' << z << ",1.0" << '\n';
     };
 
 

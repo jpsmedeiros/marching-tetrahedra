@@ -20,20 +20,20 @@ void process_images(LinkedList* list) {
     int x0 = -15;
     float h = 2 * abs(x0) / (n_processes - 1);
     float xMax = x0 + h;
-    decimate(surface, x0, xMax, x0, -x0, x0, -x0, -1, input_res, list, process_id, n_processes);
+    decimate(surface, // superficie que vamos renderizar
+            x0, xMax, // limites eixo x
+            x0, -x0, // limites eixo y
+            x0, -x0, // limites eixo z
+            -1, input_res, list, // isolevel, resolução e lista de resultados
+            process_id, n_processes); // dados do MPI com offset para adaptar pro metodo 1 automaticamente
 }
 
 void method1() {
     double startTime = 0, endTime = 0;
     startTime = MPI_Wtime();
     process_images(NULL);
-    MPI_Barrier(MPI_COMM_WORLD);
-
-    if (process_id == 0) {
-        endTime = MPI_Wtime();
-        //sleep(1);
-        //cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
-    }
+    endTime = MPI_Wtime();
+    cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
 }
 
 void print_method2(float chunk_recv_matrix[][4], int size, int process){
@@ -96,6 +96,9 @@ int main (int argc, char * argv[])
     chunk_size = atoi(argv[3]);
     if (method != 1) {
         mpi_setup(MPI_Init(&argc, &argv));
+    } else {
+        n_processes = 2;
+        process_id = 1;
     }
     process_method(method);
     if (method != 1) {
