@@ -41,7 +41,7 @@ void print_method2(float chunk_recv_matrix[][4], int size, int process){
     for (int i = 0; i < size; i++) {
         type = 's';
         if (chunk_recv_matrix[i][3] > 0) type = 'n';
-         cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
+         //cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
     }
 }
 
