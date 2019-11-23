@@ -46,7 +46,9 @@ void print_method2(float chunk_recv_matrix[][4], int size, int process){
 }
 
 void method2() {
+    double startTime = 0, endTime = 0;
     if (process_id == 0) {
+        startTime = MPI_Wtime();
         int n_arrays = 0, i = 1, j = 0, diff_last_chunk = 0, n_arrays_sum = 0;
         float chunk_recv_matrix[chunk_size][4];
         float number_of_chunks = 0;
@@ -65,6 +67,8 @@ void method2() {
                 print_method2(chunk_recv_matrix, diff_last_chunk, i);
             }
         }
+        endTime = MPI_Wtime();
+        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
     } else {
         LinkedList* list = new LinkedList();
         process_images(list);
