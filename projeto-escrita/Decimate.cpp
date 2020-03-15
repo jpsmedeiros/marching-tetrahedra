@@ -235,47 +235,24 @@ void decimate(const Isosurface& surface,
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
 
-    float grid[res_h + 1][pointRes][pointRes];
-
     float x, x1, x2;
     float y, y1, y2;
     float z, z1, z2;
     float value;
 
-    int gridPositionX, i;
+    int i;
 
-    for (i = offset_res_x, gridPositionX = 0; i <= res_h + offset_res_x; ++i, ++gridPositionX) {
-        x = (float) (i)/res_h * xrange + xMin;
-        for (size_t j = 0; j <= resolution; ++j) {
-            y = (float)j/resolution * yrange + yMin;
-            for (size_t k = 0; k <= resolution; ++k) {
-                z = (float)k/resolution * zrange + zMin;
-                value = surface.valueAt(x, y, z);
-                grid[gridPositionX][j][k] = value;
-            }
-        }
-    }
-
-    for (i = offset_res_x, gridPositionX = 0; i < res_h + offset_res_x; ++i, ++gridPositionX) {
-        x1 = (float)(i)/res_h * xrange + xMin;
-        x2 = (float)(i + 1)/res_h * xrange + xMin;
+    for (i = offset_res_x; i < res_h + offset_res_x; ++iß) {
+        x1 = (float) i / res_h * xrange + xMin;
+        x2 = (float) (i + 1) / res_h * xrange + xMin;
         for (size_t j = 0; j < resolution; ++j) {
-            y1 = (float)j/resolution * yrange + yMin;
-            y2 = (float)(j+1)/resolution * yrange + yMin;
+            y1 = (float) j / resolution * yrange + yMin;
+            y2 = (float) (j+1) / resolution * yrange + yMin;
             for (size_t k = 0; k < resolution; ++k) {
-                z2 = (float)(k+1)/resolution * zrange + zMin;
-                z1 = (float)k/resolution * zrange + zMin;
+                z1 = (float) k / resolution * zrange + zMin;
+                z2 = (float) (k+1) / resolution * zrange + zMin;
 
                 /*
-
-                 Coordinates:
-
-                      z
-                      |
-                      |___ y
-                      /
-                     /
-                    x
 
                  Cube layout:
 
@@ -300,14 +277,14 @@ void decimate(const Isosurface& surface,
                  */
 
                 const Point3D v[8] = {
-                    {x1, y1, z1, grid[gridPositionX][j][k]},
-                    {x2, y1, z1, grid[gridPositionX+1][j][k]},
-                    {x2, y2, z1, grid[gridPositionX+1][j+1][k]},
-                    {x1, y2, z1, grid[gridPositionX][j+1][k]},
-                    {x1, y1, z2, grid[gridPositionX][j][k+1]},
-                    {x2, y1, z2, grid[gridPositionX+1][j][k+1]},
-                    {x2, y2, z2, grid[gridPositionX+1][j+1][k+1]},
-                    {x1, y2, z2, grid[gridPositionX][j+1][k+1]}
+                    {x1, y1, z1, surface.valueAt(x1, y1, z1)},
+                    {x2, y1, z1, surface.valueAt(x2, y1, z1)},
+                    {x2, y2, z1, surface.valueAt(x2, y2, z1)},
+                    {x1, y2, z1, surface.valueAt(x1, y2, z1)},
+                    {x1, y1, z2, surface.valueAt(x1, y1, z2)},
+                    {x2, y1, z2, surface.valueAt(x2, y1, z2)},
+                    {x2, y2, z2, surface.valueAt(x2, y2, z2)},
+                    {x1, y2, z2, surface.valueAt(x1, y2, z2)}
                 };
 
                 const Point3D tetrahedra[6][4] = {
