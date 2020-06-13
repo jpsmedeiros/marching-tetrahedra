@@ -17,9 +17,14 @@ int chunk_size;
 
 void process_images(LinkedList* list) {
     Gyroid surface;
-    int x0 = -15;
-    float h = 2 * abs(x0) / (n_processes - 1);
+    int x0 = -15.0;
+    float h = 2 * abs(x0) / (n_processes - 1.0);
     float xMax = x0 + h;
+//    if (process_id == n_processes - 1){
+//        printf("\nh: %f\n", h);
+//        printf("\nxMax: %f\n", xMax);
+//    }
+
     decimate(surface, // superficie que vamos renderizar
             x0, xMax, // limites eixo x
             x0, -x0, // limites eixo y
@@ -41,7 +46,7 @@ void print_method2(float chunk_recv_matrix[][4], int size, int process){
     for (int i = 0; i < size; i++) {
         type = 's';
         if (chunk_recv_matrix[i][3] > 0) type = 'n';
-         //cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process -1 << '\n';
+         cout << type << "," << chunk_recv_matrix[i][0] << ',' << chunk_recv_matrix[i][1] << ',' << chunk_recv_matrix[i][2] << ',' << process-1 << '\n';
     }
 }
 
@@ -68,7 +73,8 @@ void method2() {
             }
         }
         endTime = MPI_Wtime();
-        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
+//        cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
+//        cout << "\n N arrays sum: " << n_arrays_sum << "\n";
     } else {
         LinkedList* list = new LinkedList();
         process_images(list);

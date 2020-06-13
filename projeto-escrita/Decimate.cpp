@@ -223,28 +223,51 @@ void decimate(const Isosurface& surface,
               float yMin, float yMax,
               float zMin, float zMax,
               float isolevel,
-              size_t resolution, // resolution indicates # of cubes -> the more the slower
+              size_t resolution,
               LinkedList* list, int process_id, int n_processes)
 {
+    /*
+     * Lista encadeada pra ajudar a enviar pro nó mestre na ordem certa
+     */
     resultsList = list;
-    size_t pointRes = resolution + 1; // indicates the # of points per side
-    int res_h = (resolution / (n_processes - 1)); // indicates the # of points per side
+
+    /*
+     * Vai dizer quanto de resolução cada processo vai ter, pra ficar equilibrado.
+     * Do contrário, a resolução multiplicaria junto com o nº de processos
+     */
+    int res_h = (resolution / (n_processes - 1));
+
+    /*
+     * Esse é o offset de onde cada processo deverá começar e desenhar.
+     * O offset deverá ser logo após o fim do processo anterior, não pular pixels e nem interpolá-los.
+     */
     int offset_res_x = res_h * (process_id - 1);
 
+    /*
+     * Cada range vai ser usado pra calcular o tamanho dos cubos.
+     * Quanto maior o range, maior o cubo na direção do range em questão.
+     * Isso não deve mudar o valor total calculado, só serve para exibição.
+     *
+     * O xMax, que vai definir o xrange de cada processo, fica definido em main.cpp na chamada deste método
+     */
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
 
-    float x, x1, x2;
-    float y, y1, y2;
-    float z, z1, z2;
-    float value;
+//    cout << "\nXRANGE: " << xrange << " Offset_res_x: " << offset_res_x << " process: " << process_id - 1 << " res_h: " << res_h << "\n";
 
-    int i;
+    /*
+     * p1 é o ponto atual
+     * p2 é o ponto seguinte
+     * TODO: guardar o ponto seguinte pra n precisar recalcular o ponto atual na próxima iteração
+     */
+    float x1, x2;
+    float y1, y2;
+    float z1, z2;
 
-    for (i = offset_res_x; i < res_h + offset_res_x; ++iß) {
+    for (size_t i = offset_res_x; i < res_h + offset_res_x; ++i) {
         x1 = (float) i / res_h * xrange + xMin;
-        x2 = (float) (i + 1) / res_h * xrange + xMin;
+        x2 = (float) (i+1) / res_h * xrange + xMin;
         for (size_t j = 0; j < resolution; ++j) {
             y1 = (float) j / resolution * yrange + yMin;
             y2 = (float) (j+1) / resolution * yrange + yMin;
@@ -256,14 +279,14 @@ void decimate(const Isosurface& surface,
 
                  Cube layout:
 
-                    4-------7
+                    4 ----- 7
                    /|      /|
                   / |     / |
-                 5-------6  |
-                 |  0----|--3
+                 5 ----- 6  |
+                 |  0 ---|--3
                  | /     | /
                  |/      |/
-                 1-------2
+                 1 ----- 2
 
 
                  Tetrahedrons are:
@@ -302,4 +325,8 @@ void decimate(const Isosurface& surface,
             }
         }
     }
+
+//    if (process_id == n_processes - 1)
+//        printf ("\nlast x2: %f\n", x2);
+
 }
