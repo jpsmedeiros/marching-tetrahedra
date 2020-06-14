@@ -254,31 +254,34 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
      * O xMax, que vai definir o xRange de cada processo, fica definido em main.cpp na chamada deste método
      */
     float xRange = xMax - xMin;
-    float yRange = xMin * -2;
-    float zRange = xMin * -2;
+    float yRange = -yMin - yMin;
+    float zRange = -zMin - zMin;
 
-//    cout << "\nxRange: " << xRange << " Offset_res_x: " << offset_res_x << " process: " << process_id - 1 << " res_h: " << res_h << "\n";
+    // cout << "\nxRange: " << xRange << " Offset_res_x: " << offset_res_x << " process: " << process_id - 1 << " res_h: " << res_h << "\n";
 
     /*
      * p1 é o ponto atual, que vai usar o p2 da interação passada e o valor inicial
      * da primeira posição do cubo pra cada processo
      */
     float x1 = (float) (offset_res_x) / res_h * xRange + xMin;
-    float y1 = yMin;
-    float z1 = zMin;
+    float y1, z1;
 
     /*
      * p2 é o ponto seguinte, que é calculado em toda iteração.
      */
     float x2, y2, z2;
 
-    Point3D topo_cubo_anterior[4] = { NULL, NULL, NULL, NULL };
+    Point3D last_top_surface[4];
 
     for (size_t i = offset_res_x; i < res_h + offset_res_x; ++i) {
         x2 = (float) (i+1) / res_h * xRange + xMin;
+
         for (size_t j = 0; j < resolution; ++j) {
+            if (j == 0) y1 = yMin;
             y2 = (float) (j+1) / resolution * yRange + yMin;
+
             for (size_t k = 0; k < resolution; ++k) {
+                if (k == 0) z1 = zMin;
                 z2 = (float) (k+1) / resolution * zRange + zMin;
 
                 /*
@@ -288,14 +291,11 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                  * ao invés de recalculados toda iteração.
                  * Para mais detalhes, checar o uso na declaração const Point3D v[8].
                  */
-                if (k == 0){
-                    Point3D topo_cubo_anterior[4] = {
-                        {x1, y1, z1, surface.valueAt(x1, y1, z1)}, // 0
-                        {x2, y1, z1, surface.valueAt(x2, y1, z1)}, // 1
-                        {x2, y2, z1, surface.valueAt(x2, y2, z1)}, // 2
-                        {x1, y2, z1, surface.valueAt(x1, y2, z1)}, // 3
-                    };
-                    
+                if (k == 0) {
+                    last_top_surface[0] = (Point3D) {x1, y1, z1, surface.valueAt(x1, y1, z1)}; // 0
+                    last_top_surface[1] = (Point3D) {x2, y1, z1, surface.valueAt(x2, y1, z1)}; // 1
+                    last_top_surface[2] = (Point3D) {x2, y2, z1, surface.valueAt(x2, y2, z1)}; // 2
+                    last_top_surface[3] = (Point3D) {x1, y2, z1, surface.valueAt(x1, y2, z1)}; // 3
                 }
 
                 /*
@@ -320,12 +320,11 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                  * iteração passada, portanto, podemos reaproveitar ao invés de recalcular,
                  * já que o topo do cubo da iteração anterior é o fundo do cubo atual sempre.
                  */
-
                 const Point3D v[8] = {
-                    topo_cubo_anterior[0],
-                    topo_cubo_anterior[1],
-                    topo_cubo_anterior[2],
-                    topo_cubo_anterior[3],
+                    last_top_surface[0], // 0
+                    last_top_surface[1], // 1
+                    last_top_surface[2], // 2
+                    last_top_surface[3], // 3
                     {x1, y1, z2, surface.valueAt(x1, y1, z2)}, // 4
                     {x2, y1, z2, surface.valueAt(x2, y1, z2)}, // 5
                     {x2, y2, z2, surface.valueAt(x2, y2, z2)}, // 6
@@ -356,18 +355,22 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                  * Chama o método de desenhar de fato para cada tetraedro, que vai adicionar
                  * na lista encadeada seus retornos, caso seja desenhado alguma coisa.
                  */
-                for (int t = 0; t < 6; ++t){
+                for (int t = 0; t < 6; ++t) {
                     drawTetrahedron(surface, tetrahedra[t], isolevel);
                 }
 
                 /*
                  * "Anda" o fundo do cubo pra cima pois vamos para próxima iteração.
                  */
-                topo_cubo_anterior[0] = v[4];
-                topo_cubo_anterior[1] = v[5];
-                topo_cubo_anterior[2] = v[6];
-                topo_cubo_anterior[3] = v[7];
+                last_top_surface[0] = v[4];
+                last_top_surface[1] = v[5];
+                last_top_surface[2] = v[6];
+                last_top_surface[3] = v[7];
 
+                /*
+                 * Atualiza z1 pra próxima iteração utlizar o z2 já previamente calculado,
+                 * evitando de calcularmos o mesmo ponto 2 vezes
+                 */
                 z1 = z2;
             }
             y1 = y2;
