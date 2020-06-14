@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Gyroid.h"
 #include "Decimate.h"
+#include "DecimateDeprecated.h"
 #include <mpi.h>
 #include <unistd.h>
 #include <cmath>
@@ -15,7 +16,7 @@ int method;
 int input_res;
 int chunk_size;
 
-void process_images(LinkedList* list) {
+void process_images(LinkedList* list, int method) {
     Gyroid surface;
     int x0 = -15.0;
     float h = 2 * abs(x0) / (n_processes - 1.0);
@@ -25,12 +26,20 @@ void process_images(LinkedList* list) {
 //        printf("\nxMax: %f\n", xMax);
 //    }
 
-    decimate(surface, // superficie que vamos renderizar
-            x0, xMax, // limites eixo x
-            x0, -x0, // limites eixo y
-            x0, -x0, // limites eixo z
-            -1, input_res, list, // isolevel, resolução e lista de resultados
-            process_id, n_processes); // dados do MPI com offset para adaptar pro metodo 1 automaticamente
+    if (method == 3) {
+        decimate_deprecated(surface,
+                 x0, xMax,
+                 x0, -x0
+                 x0, -x0,
+                 -1, input_res, list,
+                 process_id, n_processes);
+    } else {
+        decimate(surface, // superficie que vamos renderizar
+                 x0, xMax,
+                 -1, input_res, list, // isolevel, resolução e lista de resultados
+                 process_id, n_processes); // dados do MPI com offset para adaptar pro metodo 1 automaticamente
+    }
+
 }
 
 void method1() {
@@ -50,7 +59,7 @@ void print_method2(float chunk_recv_matrix[][4], int size, int process){
     }
 }
 
-void method2() {
+void method2(int method) {
     double startTime = 0, endTime = 0;
     if (process_id == 0) {
         startTime = MPI_Wtime();
@@ -77,7 +86,7 @@ void method2() {
 //        cout << "\n N arrays sum: " << n_arrays_sum << "\n";
     } else {
         LinkedList* list = new LinkedList();
-        process_images(list);
+        process_images(list, method);
         MPI_Send(&list->length, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
         list->send(chunk_size, 4);
         delete list;
@@ -87,7 +96,7 @@ void method2() {
 void process_method(int method) {
     if (method == 1)
         return method1();
-    return method2();
+    return method2(method);
 }
 
 void mpi_setup(int ierr) {
@@ -104,6 +113,7 @@ int main (int argc, char * argv[])
     input_res = atoi(argv[1]);
     method = atoi(argv[2]);
     chunk_size = atoi(argv[3]);
+
     if (method != 1) {
         mpi_setup(MPI_Init(&argc, &argv));
     } else {
@@ -111,6 +121,7 @@ int main (int argc, char * argv[])
         process_id = 1;
     }
     process_method(method);
+
     if (method != 1) {
         MPI_Finalize();
     }
