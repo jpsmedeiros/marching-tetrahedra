@@ -59,7 +59,7 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
 
 }
 
-void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
+static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
 {
 
     /*
