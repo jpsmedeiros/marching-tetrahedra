@@ -272,7 +272,7 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
      */
     float x2, y2, z2;
 
-    Point3D topo_cubo[4] = { NULL, NULL, NULL, NULL };
+    Point3D topo_cubo_anterior[4] = { NULL, NULL, NULL, NULL };
 
     for (size_t i = offset_res_x; i < res_h + offset_res_x; ++i) {
         x2 = (float) (i+1) / res_h * xRange + xMin;
@@ -282,19 +282,20 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                 z2 = (float) (k+1) / resolution * zRange + zMin;
 
                 /*
-                 * Calcula o topo do cubo se a iteração estiver começando em Z
+                 * Calcula o fundo do cubo se a iteração estiver começando em Z
                  *
-                 * Pontos do topo do cubo que serão reaproveitados
+                 * Pontos do topo do cubo serão reaproveitados
                  * ao invés de recalculados toda iteração.
                  * Para mais detalhes, checar o uso na declaração const Point3D v[8].
                  */
                 if (k == 0){
-                    Point3D topo_cubo[4] = {
-                        {x1, y1, z2, surface.valueAt(x1, y1, z2)}, // ponto 4
-                        {x2, y1, z2, surface.valueAt(x2, y1, z2)}, // ponto 5
-                        {x2, y2, z2, surface.valueAt(x2, y2, z2)}, // ponto 6
-                        {x1, y2, z2, surface.valueAt(x1, y2, z2)}  // ponto 7
+                    Point3D topo_cubo_anterior[4] = {
+                        {x1, y1, z1, surface.valueAt(x1, y1, z1)}, // 0
+                        {x2, y1, z1, surface.valueAt(x2, y1, z1)}, // 1
+                        {x2, y2, z1, surface.valueAt(x2, y2, z1)}, // 2
+                        {x1, y2, z1, surface.valueAt(x1, y2, z1)}, // 3
                     };
+                    
                 }
 
                 /*
@@ -307,15 +308,7 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                  | /     | /
                  |/      |/
                  1 ----- 2
-
-                 Tetrahedrons are:
-                     0, 7, 3, 2
-                     0, 7, 2, 6
-                     0, 4, 6, 7
-                     0, 6, 1, 2
-                     0, 6, 1, 4
-                     5, 6, 1, 4
-                 */
+                */
 
                 /*
                  * Monta o Point3D representando o CUBO que vai ser usado com os valores relativos da função.
@@ -323,23 +316,32 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                  * um grid como no método 2, isso poupa memória pois não precisaremos armazenar cada valor
                  * e depois consultá-los.
                  *
-                 * O topo do cubo, ou seja, pontos 4, 5, 6 e 7, já foi utilizado na
-                 * iteração passada, portanto, podemos reaproveitar ao invés de recalcular.
+                 * O fundo do cubo, ou seja, pontos 0, 1, 2 e 3, já foi utilizado na
+                 * iteração passada, portanto, podemos reaproveitar ao invés de recalcular,
+                 * já que o topo do cubo da iteração anterior é o fundo do cubo atual sempre.
                  */
 
                 const Point3D v[8] = {
-                    {x1, y1, z1, surface.valueAt(x1, y1, z1)}, // 0
-                    {x2, y1, z1, surface.valueAt(x2, y1, z1)}, // 1
-                    {x2, y2, z1, surface.valueAt(x2, y2, z1)}, // 2
-                    {x1, y2, z1, surface.valueAt(x1, y2, z1)}, // 3
-                    topo_cubo[0], // 4
-                    topo_cubo[1], // 5
-                    topo_cubo[2], // 6
-                    topo_cubo[3] // 7
+                    topo_cubo_anterior[0],
+                    topo_cubo_anterior[1],
+                    topo_cubo_anterior[2],
+                    topo_cubo_anterior[3],
+                    {x1, y1, z2, surface.valueAt(x1, y1, z2)}, // 4
+                    {x2, y1, z2, surface.valueAt(x2, y1, z2)}, // 5
+                    {x2, y2, z2, surface.valueAt(x2, y2, z2)}, // 6
+                    {x1, y2, z2, surface.valueAt(x1, y2, z2)}  // 7
                 };
 
                 /*
                  * Monta um array de 6 Point3D representando CADA TETRAEDRO DO CUBO.
+                 *
+                 *   Tetrahedrons are:
+                 *    0, 7, 3, 2
+                 *    0, 7, 2, 6
+                 *    0, 4, 6, 7
+                 *    0, 6, 1, 2
+                 *    0, 6, 1, 4
+                 *    5, 6, 1, 4
                  */
                 const Point3D tetrahedra[6][4] = {
                     { v[0], v[7], v[3], v[2] },
@@ -359,12 +361,12 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                 }
 
                 /*
-                 * "Anda" o topo do cubo pra cima pois vamos para próxima iteração.
+                 * "Anda" o fundo do cubo pra cima pois vamos para próxima iteração.
                  */
-                topo_cubo[0] = v[0];
-                topo_cubo[1] = v[1];
-                topo_cubo[2] = v[2];
-                topo_cubo[3] = v[3];
+                topo_cubo_anterior[0] = v[4];
+                topo_cubo_anterior[1] = v[5];
+                topo_cubo_anterior[2] = v[6];
+                topo_cubo_anterior[3] = v[7];
 
                 z1 = z2;
             }
