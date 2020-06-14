@@ -332,7 +332,8 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                 };
 
                 /*
-                 * Monta um array de 6 Point3D representando CADA TETRAEDRO DO CUBO.
+                 * Monta uma matriz de 6x4 Point3D representando CADA TETRAEDRO DO CUBO, sendo 6 no total.
+                 * (Ou seja, 6 tetraedos de 4 lados, matriz 6x4 de Point3Ds)
                  *
                  *   Tetrahedrons are:
                  *    0, 7, 3, 2
