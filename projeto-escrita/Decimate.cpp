@@ -366,6 +366,11 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
 
                 z1 = z2;
             }
+            /*
+            * Seta topo do cubo pra NULO, forçando a iteração em Z
+            * refazê-lo para primeiro uso, já que "andamos" um passo pra trás.
+            */
+            topo_cubo = NULL;
             y1 = y2;
         }
         x1 = x2;
