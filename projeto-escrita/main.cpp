@@ -26,16 +26,16 @@ void process_images(LinkedList* list, int method) {
 //        printf("\nxMax: %f\n", xMax);
 //    }
 
-    if (method == 3) {
+    if (method == 2) {
         decimate_deprecated(surface,
                  x0, xMax,
-                 x0, -x0
+                 x0, -x0,
                  x0, -x0,
                  -1, input_res, list,
                  process_id, n_processes);
     } else {
         decimate(surface, // superficie que vamos renderizar
-                 x0, xMax,
+                 x0, xMax, // xRange
                  -1, input_res, list, // isolevel, resolução e lista de resultados
                  process_id, n_processes); // dados do MPI com offset para adaptar pro metodo 1 automaticamente
     }
@@ -45,7 +45,7 @@ void process_images(LinkedList* list, int method) {
 void method1() {
     double startTime = 0, endTime = 0;
     startTime = MPI_Wtime();
-    process_images(NULL);
+    process_images(NULL, 2);
     endTime = MPI_Wtime();
     cout << "\n Tempo decorrido: " << endTime - startTime << "\n";
 }

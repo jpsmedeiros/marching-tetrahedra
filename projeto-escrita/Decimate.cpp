@@ -59,7 +59,7 @@ static inline void drawVert(const Isosurface& surface, const Point3D& p1, const 
 
 }
 
-static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
+void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
 {
 
     /*
@@ -243,8 +243,8 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
      *  Sempre desenhamos o espaço em formato de cubo, portanto, basta usar o xMin pra calcular
      *  zMin e yMin, que é o ponto inicial das coordenadas y e z
      */
-    float yMin = xMin
-    float zMin = xMin
+    float yMin = xMin;
+    float zMin = xMin;
 
     /*
      * Cada range vai ser usado pra calcular o tamanho dos cubos.
@@ -272,12 +272,7 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
      */
     float x2, y2, z2;
 
-    /*
-     * Pontos do topo do cubo que serão reaproveitados
-     * ao invés de recalculados toda iteração.
-     * Para mais detalhes, checar o uso na declaração const Point3D v[8].
-     */
-    Point3D topo_cubo[4] = NULL;
+    Point3D topo_cubo[4] = { NULL, NULL, NULL, NULL };
 
     for (size_t i = offset_res_x; i < res_h + offset_res_x; ++i) {
         x2 = (float) (i+1) / res_h * xRange + xMin;
@@ -288,9 +283,13 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
 
                 /*
                  * Calcula o topo do cubo se a iteração estiver começando em Z
+                 *
+                 * Pontos do topo do cubo que serão reaproveitados
+                 * ao invés de recalculados toda iteração.
+                 * Para mais detalhes, checar o uso na declaração const Point3D v[8].
                  */
-                if (topo_cubo == NULL){
-                    topo_cubo = {
+                if (k == 0){
+                    Point3D topo_cubo[4] = {
                         {x1, y1, z2, surface.valueAt(x1, y1, z2)}, // ponto 4
                         {x2, y1, z2, surface.valueAt(x2, y1, z2)}, // ponto 5
                         {x2, y2, z2, surface.valueAt(x2, y2, z2)}, // ponto 6
@@ -362,15 +361,13 @@ void decimate(const Isosurface& surface, float xMin, float xMax, float isolevel,
                 /*
                  * "Anda" o topo do cubo pra cima pois vamos para próxima iteração.
                  */
-                topo_cubo = { v[0], v[1], v[2], v[3] };
+                topo_cubo[0] = v[0];
+                topo_cubo[1] = v[1];
+                topo_cubo[2] = v[2];
+                topo_cubo[3] = v[3];
 
                 z1 = z2;
             }
-            /*
-            * Seta topo do cubo pra NULO, forçando a iteração em Z
-            * refazê-lo para primeiro uso, já que "andamos" um passo pra trás.
-            */
-            topo_cubo = NULL;
             y1 = y2;
         }
         x1 = x2;

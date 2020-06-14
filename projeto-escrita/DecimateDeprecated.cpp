@@ -2,13 +2,13 @@
 #include <iostream>
 #include <cmath>
 #include "Decimate.h"
-#include "DecimateDepdecated.h"
+#include "DecimateDeprecated.h"
 #include "Array3D.h"
 #include "LinkedList.h"
 
 using namespace std;
 
-LinkedList* resultsList = NULL;
+LinkedList* resultsListDeprecated = NULL;
 
 void decimate_deprecated(const Isosurface& surface,
               float xMin, float xMax,
@@ -21,7 +21,7 @@ void decimate_deprecated(const Isosurface& surface,
     /*
      * Lista encadeada pra ajudar a enviar pro nó mestre na ordem certa
      */
-    resultsList = list;
+    resultsListDeprecated = list;
 
     /*
      * Vai dizer quanto de resolução cada processo vai ter, pra ficar equilibrado.
@@ -49,7 +49,7 @@ void decimate_deprecated(const Isosurface& surface,
     /*
      * Grid que vai conter o valor da função pra cada ponto
      */
-    float grid[res_h + 1][pointRes][pointRes];
+    float grid[res_h + 1][resolution + 1][resolution + 1];
 
     /*
      * Posição do grid que inicia em zero pra todos os processos
@@ -67,8 +67,7 @@ void decimate_deprecated(const Isosurface& surface,
             y = (float)j/resolution * yrange + yMin;
             for (size_t k = 0; k <= resolution; ++k) {
                 z = (float)k/resolution * zrange + zMin;
-                value = surface.valueAt(x, y, z);
-                grid[gridPositionX][j][k] = value;
+                grid[gridPositionX][j][k] = surface.valueAt(x, y, z);
             }
         }
     }
@@ -117,7 +116,7 @@ void decimate_deprecated(const Isosurface& surface,
                  */
 
                 const Point3D v[8] = {
-                    {x1, y1, z1, grid[gridPositionX][j][k]},},
+                    {x1, y1, z1, grid[gridPositionX][j][k]},
                     {x2, y1, z1, grid[gridPositionX+1][j][k]},
                     {x2, y2, z1, grid[gridPositionX+1][j+1][k]},
                     {x1, y2, z1, grid[gridPositionX][j+1][k]},

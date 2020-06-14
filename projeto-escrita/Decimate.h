@@ -16,11 +16,9 @@
 
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
-              float yMin, float yMax,
-              float zMin, float zMax,
               float isolevel,
               size_t resolution, LinkedList* list, int process_id, int n_processes);
 
-static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel);
+void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel);
 
 #endif
